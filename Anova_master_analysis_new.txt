@@ -1,0 +1,1581 @@
+    Genotype   Pop     Sex         Temp      LD50_mean        LenF_mean    
+ FFD10  : 4   FFD:40   F:40   Min.   :21   Min.   : 40.00   Min.   :1.219  
+ FFD14  : 4   PC :40   M:40   1st Qu.:21   1st Qu.: 60.66   1st Qu.:1.369  
+ FFD16  : 4                   Median :23   Median : 81.00   Median :1.475  
+ FFD19  : 4                   Mean   :23   Mean   : 81.49   Mean   :1.472  
+ FFD2   : 4                   3rd Qu.:25   3rd Qu.: 97.75   3rd Qu.:1.548  
+ FFD22  : 4                   Max.   :25   Max.   :136.67   Max.   :1.771  
+ (Other):56                                                 NA's   :1      
+   LenQ_mean       PerChange          GluNorm           GluCanS     
+ Min.   :0.960   Min.   :-52.807   Min.   :0.02900   Min.   :0.583  
+ 1st Qu.:1.264   1st Qu.:-28.108   1st Qu.:0.04350   1st Qu.:1.140  
+ Median :1.369   Median :-18.498   Median :0.05000   Median :1.357  
+ Mean   :1.355   Mean   :-19.976   Mean   :0.05262   Mean   :1.478  
+ 3rd Qu.:1.432   3rd Qu.:-12.107   3rd Qu.:0.05600   3rd Qu.:1.693  
+ Max.   :1.647   Max.   :  2.792   Max.   :0.12800   Max.   :3.572  
+ NA's   :1                                                          
+    TGANorm          TGACanS      Sleep_ALL_percent Sleep_ALL_meanMove
+ Min.   :0.1130   Min.   :0.780   Min.   :0.4060    Min.   :0.929     
+ 1st Qu.:0.1857   1st Qu.:0.985   1st Qu.:0.5835    1st Qu.:1.138     
+ Median :0.2100   Median :1.101   Median :0.6370    Median :1.323     
+ Mean   :0.2184   Mean   :1.108   Mean   :0.6323    Mean   :1.347     
+ 3rd Qu.:0.2415   3rd Qu.:1.244   3rd Qu.:0.6817    3rd Qu.:1.550     
+ Max.   :0.3390   Max.   :1.582   Max.   :0.8050    Max.   :2.032     
+                  NA's   :40                                          
+ Sleep_Day_percent Sleep_Day_meanMove Sleep_Night_percent Sleep_Night_meanMove
+ Min.   :0.1630    Min.   :0.795      Min.   :0.5420      Min.   :1.501       
+ 1st Qu.:0.3520    1st Qu.:1.002      1st Qu.:0.7708      1st Qu.:1.844       
+ Median :0.4175    Median :1.145      Median :0.8825      Median :2.075       
+ Mean   :0.4214    Mean   :1.172      Mean   :0.8422      Mean   :2.080       
+ 3rd Qu.:0.5060    3rd Qu.:1.335      3rd Qu.:0.9247      3rd Qu.:2.319       
+ Max.   :0.6830    Max.   :1.803      Max.   :0.9590      Max.   :2.962       
+                                                                              
+ Starve_ALL_percent Starve_ALL_meanMove Starve_Day_percent Starve_Day_meanMove
+ Min.   :0.2700     Min.   :1.028       Min.   :0.1390     Min.   :0.901      
+ 1st Qu.:0.4400     1st Qu.:1.265       1st Qu.:0.2417     1st Qu.:1.175      
+ Median :0.5105     Median :1.417       Median :0.2820     Median :1.290      
+ Mean   :0.5051     Mean   :1.493       Mean   :0.3066     Mean   :1.353      
+ 3rd Qu.:0.5703     3rd Qu.:1.707       3rd Qu.:0.3922     3rd Qu.:1.537      
+ Max.   :0.7480     Max.   :2.293       Max.   :0.5800     Max.   :2.168      
+                                                                              
+ Starve_Night_percent Starve_Night_meanMove
+ Min.   :0.2840       Min.   :1.264        
+ 1st Qu.:0.5595       1st Qu.:1.697        
+ Median :0.7365       Median :1.988        
+ Mean   :0.6974       Mean   :1.989        
+ 3rd Qu.:0.8325       3rd Qu.:2.276        
+ Max.   :0.9520       Max.   :2.738        
+                                           
+
+Call:
+lm(formula = x$Sleep_ALL_percent ~ x$Temp + x$Sex + x$Pop + x$LD50_mean + 
+    x$GluCanS + x$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.175831 -0.031515  0.000394  0.042875  0.149568 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.0899658  0.1845807   0.487  0.62743    
+x$Temp       0.0123617  0.0061159   2.021  0.04692 *  
+x$SexM       0.1255457  0.0223496   5.617 3.32e-07 ***
+x$PopPC      0.0810854  0.0169612   4.781 8.82e-06 ***
+x$LD50_mean  0.0018877  0.0005887   3.207  0.00199 ** 
+x$GluCanS   -0.0038572  0.0175105  -0.220  0.82627    
+x$TGANorm    0.0299399  0.1834249   0.163  0.87079    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06758 on 73 degrees of freedom
+Multiple R-squared:  0.3976,	Adjusted R-squared:  0.3481 
+F-statistic:  8.03 on 6 and 73 DF,  p-value: 1.144e-06
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_ALL_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.01866  1  4.0855  0.046921 *  
+x$Sex       0.14412  1 31.5548 3.324e-07 ***
+x$Pop       0.10438  1 22.8545 8.824e-06 ***
+x$LD50_mean 0.04696  1 10.2822  0.001994 ** 
+x$GluCanS   0.00022  1  0.0485  0.826269    
+x$TGANorm   0.00012  1  0.0266  0.870791    
+Residuals   0.33340 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Sleep_Day_percent ~ x$Temp + x$Sex + x$Pop + x$LD50_mean + 
+    x$GluCanS + x$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.163248 -0.048214 -0.002593  0.046537  0.201607 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.4042786  0.2195423  -1.841   0.0696 .  
+x$Temp       0.0176676  0.0072743   2.429   0.0176 *  
+x$SexM       0.2500255  0.0265828   9.406 3.25e-14 ***
+x$PopPC      0.0501004  0.0201738   2.483   0.0153 *  
+x$LD50_mean  0.0029421  0.0007002   4.202 7.40e-05 ***
+x$GluCanS   -0.0210363  0.0208271  -1.010   0.3158    
+x$TGANorm    0.2773597  0.2181675   1.271   0.2077    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08038 on 73 degrees of freedom
+Multiple R-squared:  0.5942,	Adjusted R-squared:  0.5608 
+F-statistic: 17.81 on 6 and 73 DF,  p-value: 1.339e-12
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_Day_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.03811  1  5.8990   0.01761 *  
+x$Sex       0.57158  1 88.4639 3.246e-14 ***
+x$Pop       0.03985  1  6.1674   0.01531 *  
+x$LD50_mean 0.11408  1 17.6562 7.395e-05 ***
+x$GluCanS   0.00659  1  1.0202   0.31581    
+x$TGANorm   0.01044  1  1.6162   0.20765    
+Residuals   0.47166 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Sleep_Night_percent ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.26490 -0.03103  0.01605  0.05588  0.14927 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.5845996  0.2426293   2.409   0.0185 *  
+x$Temp       0.0069910  0.0080392   0.870   0.3874    
+x$SexM       0.0014277  0.0293783   0.049   0.9614    
+x$PopPC      0.1123676  0.0222953   5.040 3.27e-06 ***
+x$LD50_mean  0.0008363  0.0007738   1.081   0.2834    
+x$GluCanS    0.0129891  0.0230173   0.564   0.5743    
+x$TGANorm   -0.2170768  0.2411100  -0.900   0.3709    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08883 on 73 degrees of freedom
+Multiple R-squared:  0.311,	Adjusted R-squared:  0.2544 
+F-statistic: 5.492 on 6 and 73 DF,  p-value: 9.775e-05
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_Night_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.00597  1  0.7562    0.3874    
+x$Sex       0.00002  1  0.0024    0.9614    
+x$Pop       0.20045  1 25.4013 3.268e-06 ***
+x$LD50_mean 0.00922  1  1.1680    0.2834    
+x$GluCanS   0.00251  1  0.3185    0.5743    
+x$TGANorm   0.00640  1  0.8106    0.3709    
+Residuals   0.57608 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_ALL_percent ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.21393 -0.05857  0.01078  0.05139  0.18449 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.2943592  0.2342853  -1.256 0.212972    
+x$Temp       0.0170756  0.0077628   2.200 0.030996 *  
+x$SexM       0.1168043  0.0283679   4.117 9.97e-05 ***
+x$PopPC      0.0937657  0.0215286   4.355 4.26e-05 ***
+x$LD50_mean  0.0030114  0.0007472   4.030 0.000135 ***
+x$GluCanS   -0.0012835  0.0222257  -0.058 0.954106    
+x$TGANorm    0.2652918  0.2328182   1.139 0.258228    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08578 on 73 degrees of freedom
+Multiple R-squared:  0.3015,	Adjusted R-squared:  0.2441 
+F-statistic: 5.253 on 6 and 73 DF,  p-value: 0.0001519
+
+Anova Table (Type II tests)
+
+Response: x$Starve_ALL_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.03560  1  4.8386 0.0309964 *  
+x$Sex       0.12475  1 16.9536 9.968e-05 ***
+x$Pop       0.13958  1 18.9696 4.264e-05 ***
+x$LD50_mean 0.11951  1 16.2420 0.0001353 ***
+x$GluCanS   0.00002  1  0.0033 0.9541064    
+x$TGANorm   0.00955  1  1.2984 0.2582281    
+Residuals   0.53714 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_Day_percent ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.125261 -0.050804 -0.000511  0.049828  0.219199 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.4612535  0.2174371  -2.121  0.03729 *  
+x$Temp       0.0209531  0.0072045   2.908  0.00481 ** 
+x$SexM       0.1470626  0.0263279   5.586 3.78e-07 ***
+x$PopPC      0.0311289  0.0199804   1.558  0.12356    
+x$LD50_mean  0.0014300  0.0006935   2.062  0.04276 *  
+x$GluCanS   -0.0160932  0.0206274  -0.780  0.43780    
+x$TGANorm    0.4767561  0.2160756   2.206  0.03050 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07961 on 73 degrees of freedom
+Multiple R-squared:  0.4337,	Adjusted R-squared:  0.3871 
+F-statistic: 9.317 on 6 and 73 DF,  p-value: 1.413e-07
+
+Anova Table (Type II tests)
+
+Response: x$Starve_Day_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.05361  1  8.4584  0.004811 ** 
+x$Sex       0.19775  1 31.2012 3.775e-07 ***
+x$Pop       0.01538  1  2.4273  0.123565    
+x$LD50_mean 0.02695  1  4.2523  0.042756 *  
+x$GluCanS   0.00386  1  0.6087  0.437804    
+x$TGANorm   0.03085  1  4.8683  0.030500 *  
+Residuals   0.46266 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_Night_percent ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.4330 -0.1050  0.0117  0.1000  0.2861 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.123878   0.405278  -0.306 0.760733    
+x$Temp       0.013133   0.013428   0.978 0.331288    
+x$SexM       0.086028   0.049072   1.753 0.083786 .  
+x$PopPC      0.154571   0.037241   4.151 8.87e-05 ***
+x$LD50_mean  0.004511   0.001293   3.490 0.000824 ***
+x$GluCanS    0.012690   0.038447   0.330 0.742303    
+x$TGANorm    0.057383   0.402741   0.142 0.887093    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1484 on 73 degrees of freedom
+Multiple R-squared:  0.2928,	Adjusted R-squared:  0.2347 
+F-statistic: 5.037 on 6 and 73 DF,  p-value: 0.000227
+
+Anova Table (Type II tests)
+
+Response: x$Starve_Night_percent
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.02106  1  0.9565 0.3312885    
+x$Sex       0.06767  1  3.0733 0.0837859 .  
+x$Pop       0.37930  1 17.2269 8.872e-05 ***
+x$LD50_mean 0.26814  1 12.1783 0.0008237 ***
+x$GluCanS   0.00240  1  0.1089 0.7423034    
+x$TGANorm   0.00045  1  0.0203 0.8870928    
+Residuals   1.60732 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Sleep_ALL_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.43590 -0.07258 -0.00575  0.08674  0.41901 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.1291235  0.4413468   2.558  0.01259 *  
+x$Temp       0.0015407  0.0146235   0.105  0.91638    
+x$SexM       0.4014937  0.0534396   7.513 1.15e-10 ***
+x$PopPC     -0.1356172  0.0405555  -3.344  0.00131 ** 
+x$LD50_mean  0.0007564  0.0014076   0.537  0.59264    
+x$GluCanS   -0.0411364  0.0418689  -0.983  0.32910    
+x$TGANorm    0.2245370  0.4385832   0.512  0.61022    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1616 on 73 degrees of freedom
+Multiple R-squared:  0.6421,	Adjusted R-squared:  0.6127 
+F-statistic: 21.83 on 6 and 73 DF,  p-value: 1.584e-14
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_ALL_meanMove
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.00029  1  0.0111  0.916382    
+x$Sex       1.47389  1 56.4458 1.153e-10 ***
+x$Pop       0.29199  1 11.1822  0.001306 ** 
+x$LD50_mean 0.00754  1  0.2888  0.592637    
+x$GluCanS   0.02521  1  0.9653  0.329096    
+x$TGANorm   0.00684  1  0.2621  0.610224    
+Residuals   1.90615 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Sleep_Day_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.32130 -0.09178 -0.00002  0.09317  0.43378 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.430522   0.403216   1.068    0.289    
+x$Temp       0.021493   0.013360   1.609    0.112    
+x$SexM       0.353876   0.048823   7.248  3.6e-10 ***
+x$PopPC     -0.057877   0.037052  -1.562    0.123    
+x$LD50_mean  0.001382   0.001286   1.074    0.286    
+x$GluCanS   -0.003390   0.038252  -0.089    0.930    
+x$TGANorm   -0.039596   0.400692  -0.099    0.922    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1476 on 73 degrees of freedom
+Multiple R-squared:  0.5771,	Adjusted R-squared:  0.5423 
+F-statistic:  16.6 on 6 and 73 DF,  p-value: 5.714e-12
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_Day_meanMove
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.05641  1  2.5880    0.1120    
+x$Sex       1.14501  1 52.5363 3.601e-10 ***
+x$Pop       0.05318  1  2.4400    0.1226    
+x$LD50_mean 0.02516  1  1.1543    0.2862    
+x$GluCanS   0.00017  1  0.0079    0.9296    
+x$TGANorm   0.00021  1  0.0098    0.9216    
+Residuals   1.59101 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Sleep_Night_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.66187 -0.20614  0.00429  0.16830  0.74157 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  3.3471252  0.7691812   4.352 4.32e-05 ***
+x$Temp      -0.0570983  0.0254859  -2.240  0.02811 *  
+x$SexM       0.2926025  0.0931347   3.142  0.00243 ** 
+x$PopPC      0.0157634  0.0706804   0.223  0.82414    
+x$LD50_mean -0.0009496  0.0024532  -0.387  0.69981    
+x$GluCanS   -0.0499816  0.0729693  -0.685  0.49553    
+x$TGANorm    0.2000814  0.7643647   0.262  0.79424    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2816 on 73 degrees of freedom
+Multiple R-squared:   0.32,	Adjusted R-squared:  0.2641 
+F-statistic: 5.726 on 6 and 73 DF,  p-value: 6.366e-05
+
+Anova Table (Type II tests)
+
+Response: x$Sleep_Night_meanMove
+            Sum Sq Df F value   Pr(>F)   
+x$Temp      0.3981  1  5.0193 0.028109 * 
+x$Sex       0.7828  1  9.8704 0.002427 **
+x$Pop       0.0039  1  0.0497 0.824140   
+x$LD50_mean 0.0119  1  0.1498 0.699808   
+x$GluCanS   0.0372  1  0.4692 0.495534   
+x$TGANorm   0.0054  1  0.0685 0.794242   
+Residuals   5.7897 73                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_ALL_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.38758 -0.09730  0.00080  0.07407  0.73002 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.308991   0.527603   0.586  0.55992    
+x$Temp       0.044341   0.017481   2.536  0.01334 *  
+x$SexM       0.441504   0.063884   6.911 1.52e-09 ***
+x$PopPC     -0.130042   0.048482  -2.682  0.00904 ** 
+x$LD50_mean  0.001773   0.001683   1.053  0.29560    
+x$GluCanS   -0.032429   0.050052  -0.648  0.51907    
+x$TGANorm   -0.404281   0.524299  -0.771  0.44314    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1932 on 73 degrees of freedom
+Multiple R-squared:  0.6019,	Adjusted R-squared:  0.5692 
+F-statistic:  18.4 on 6 and 73 DF,  p-value: 6.787e-13
+
+Anova Table (Type II tests)
+
+Response: x$Starve_ALL_meanMove
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.24007  1  6.4337  0.013336 *  
+x$Sex       1.78228  1 47.7627 1.522e-09 ***
+x$Pop       0.26847  1  7.1947  0.009037 ** 
+x$LD50_mean 0.04141  1  1.1098  0.295601    
+x$GluCanS   0.01566  1  0.4198  0.519073    
+x$TGANorm   0.02219  1  0.5946  0.443143    
+Residuals   2.72402 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_Day_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.34878 -0.10462 -0.00218  0.08138  0.61796 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.299036   0.517404  -0.578 0.565074    
+x$Temp       0.060806   0.017144   3.547 0.000685 ***
+x$SexM       0.403562   0.062649   6.442 1.11e-08 ***
+x$PopPC     -0.068454   0.047544  -1.440 0.154201    
+x$LD50_mean  0.002794   0.001650   1.693 0.094691 .  
+x$GluCanS   -0.007111   0.049084  -0.145 0.885217    
+x$TGANorm   -0.599636   0.514164  -1.166 0.247316    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1894 on 73 degrees of freedom
+Multiple R-squared:  0.5383,	Adjusted R-squared:  0.5003 
+F-statistic: 14.18 on 6 and 73 DF,  p-value: 1.233e-10
+
+Anova Table (Type II tests)
+
+Response: x$Starve_Day_meanMove
+             Sum Sq Df F value    Pr(>F)    
+x$Temp      0.45147  1 12.5804 0.0006853 ***
+x$Sex       1.48911  1 41.4949 1.109e-08 ***
+x$Pop       0.07439  1  2.0730 0.1542010    
+x$LD50_mean 0.10288  1  2.8668 0.0946908 .  
+x$GluCanS   0.00075  1  0.0210 0.8852172    
+x$TGANorm   0.04881  1  1.3601 0.2473158    
+Residuals   2.61973 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$Starve_Night_meanMove ~ x$Temp + x$Sex + x$Pop + 
+    x$LD50_mean + x$GluCanS + x$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.87314 -0.15205  0.02436  0.18634  0.53122 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.182067   0.791665   1.493  0.13971    
+x$Temp       0.003417   0.026231   0.130  0.89673    
+x$SexM       0.600149   0.095857   6.261 2.36e-08 ***
+x$PopPC      0.025389   0.072746   0.349  0.72809    
+x$LD50_mean  0.007694   0.002525   3.047  0.00322 ** 
+x$GluCanS   -0.091095   0.075102  -1.213  0.22906    
+x$TGANorm   -0.352867   0.786708  -0.449  0.65509    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2899 on 73 degrees of freedom
+Multiple R-squared:  0.4233,	Adjusted R-squared:  0.3759 
+F-statistic: 8.932 on 6 and 73 DF,  p-value: 2.612e-07
+
+Anova Table (Type II tests)
+
+Response: x$Starve_Night_meanMove
+            Sum Sq Df F value    Pr(>F)    
+x$Temp      0.0014  1  0.0170  0.896726    
+x$Sex       3.2933  1 39.1985 2.364e-08 ***
+x$Pop       0.0102  1  0.1218  0.728090    
+x$LD50_mean 0.7801  1  9.2849  0.003215 ** 
+x$GluCanS   0.1236  1  1.4712  0.229060    
+x$TGANorm   0.0169  1  0.2012  0.655095    
+Residuals   6.1331 73                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Sleep_ALL_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.142775 -0.018906  0.008344  0.036542  0.128191 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.1682589  0.2286447   0.736 0.466840    
+F$Temp       0.0097113  0.0078803   1.232 0.226271    
+F$PopPC      0.0818690  0.0227259   3.602 0.000995 ***
+F$LD50_mean  0.0020955  0.0006449   3.249 0.002609 ** 
+F$GluCanS   -0.0199943  0.0257662  -0.776 0.443120    
+F$TGANorm   -0.0276462  0.2529390  -0.109 0.913607    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06339 on 34 degrees of freedom
+Multiple R-squared:  0.3351,	Adjusted R-squared:  0.2373 
+F-statistic: 3.426 on 5 and 34 DF,  p-value: 0.01296
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_ALL_percent
+              Sum Sq Df F value    Pr(>F)    
+F$Temp      0.006102  1  1.5187 0.2262706    
+F$Pop       0.052144  1 12.9777 0.0009952 ***
+F$LD50_mean 0.042419  1 10.5571 0.0026086 ** 
+F$GluCanS   0.002419  1  0.6022 0.4431203    
+F$TGANorm   0.000048  1  0.0119 0.9136073    
+Residuals   0.136612 34                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Sleep_Day_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.135285 -0.033925  0.002535  0.032663  0.212611 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.0781319  0.2600214  -0.300   0.7656    
+F$Temp       0.0056201  0.0089617   0.627   0.5348    
+F$PopPC      0.0500142  0.0258445   1.935   0.0613 .  
+F$LD50_mean  0.0033873  0.0007334   4.618 5.34e-05 ***
+F$GluCanS   -0.0708029  0.0293021  -2.416   0.0212 *  
+F$TGANorm    0.2079942  0.2876496   0.723   0.4746    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07209 on 34 degrees of freedom
+Multiple R-squared:  0.4587,	Adjusted R-squared:  0.3791 
+F-statistic: 5.762 on 5 and 34 DF,  p-value: 0.0005905
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_Day_percent
+              Sum Sq Df F value    Pr(>F)    
+F$Temp      0.002044  1  0.3933   0.53477    
+F$Pop       0.019461  1  3.7450   0.06132 .  
+F$LD50_mean 0.110833  1 21.3286 5.339e-05 ***
+F$GluCanS   0.030340  1  5.8385   0.02120 *  
+F$TGANorm   0.002717  1  0.5228   0.47457    
+Residuals   0.176679 34                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Sleep_Night_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.23143 -0.01423  0.01256  0.04635  0.14912 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  0.4146854  0.3320469   1.249  0.22024   
+F$Temp       0.0137513  0.0114441   1.202  0.23782   
+F$PopPC      0.1136976  0.0330034   3.445  0.00154 **
+F$LD50_mean  0.0008040  0.0009366   0.858  0.39668   
+F$GluCanS    0.0307368  0.0374187   0.821  0.41713   
+F$TGANorm   -0.2624896  0.3673280  -0.715  0.47974   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09205 on 34 degrees of freedom
+Multiple R-squared:  0.3109,	Adjusted R-squared:  0.2096 
+F-statistic: 3.068 on 5 and 34 DF,  p-value: 0.02164
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_Night_percent
+              Sum Sq Df F value   Pr(>F)   
+F$Temp      0.012235  1  1.4439 0.237818   
+F$Pop       0.100571  1 11.8682 0.001536 **
+F$LD50_mean 0.006244  1  0.7369 0.396677   
+F$GluCanS   0.005718  1  0.6747 0.417126   
+F$TGANorm   0.004327  1  0.5106 0.479739   
+Residuals   0.288114 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Starve_ALL_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.19662 -0.04234  0.01142  0.05620  0.18109 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -0.3082783  0.3217739  -0.958 0.344797    
+F$Temp       0.0171651  0.0110900   1.548 0.130929    
+F$PopPC      0.1173775  0.0319823   3.670 0.000824 ***
+F$LD50_mean  0.0028781  0.0009076   3.171 0.003212 ** 
+F$GluCanS    0.0061016  0.0362611   0.168 0.867369    
+F$TGANorm    0.2721589  0.3559635   0.765 0.449802    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08921 on 34 degrees of freedom
+Multiple R-squared:   0.36,	Adjusted R-squared:  0.2659 
+F-statistic: 3.826 on 5 and 34 DF,  p-value: 0.00741
+
+Anova Table (Type II tests)
+
+Response: F$Starve_ALL_percent
+              Sum Sq Df F value    Pr(>F)    
+F$Temp      0.019064  1  2.3957 0.1309293    
+F$Pop       0.107186  1 13.4694 0.0008243 ***
+F$LD50_mean 0.080017  1 10.0552 0.0032118 ** 
+F$GluCanS   0.000225  1  0.0283 0.8673686    
+F$TGANorm   0.004652  1  0.5846 0.4498020    
+Residuals   0.270563 34                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Starve_Day_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.118672 -0.037766 -0.001911  0.035571  0.245355 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.1322079  0.2741455  -0.482   0.6327  
+F$Temp       0.0066617  0.0094485   0.705   0.4856  
+F$PopPC      0.0415120  0.0272483   1.523   0.1369  
+F$LD50_mean  0.0017776  0.0007733   2.299   0.0278 *
+F$GluCanS   -0.0541990  0.0308938  -1.754   0.0884 .
+F$TGANorm    0.5624383  0.3032744   1.855   0.0724 .
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.076 on 34 degrees of freedom
+Multiple R-squared:  0.2964,	Adjusted R-squared:  0.193 
+F-statistic: 2.865 on 5 and 34 DF,  p-value: 0.02903
+
+Anova Table (Type II tests)
+
+Response: F$Starve_Day_percent
+              Sum Sq Df F value  Pr(>F)  
+F$Temp      0.002871  1  0.4971 0.48558  
+F$Pop       0.013407  1  2.3210 0.13689  
+F$LD50_mean 0.030525  1  5.2845 0.02779 *
+F$GluCanS   0.017778  1  3.0778 0.08838 .
+F$TGANorm   0.019867  1  3.4394 0.07235 .
+Residuals   0.196394 34                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Starve_Night_percent ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.35540 -0.08560  0.01822  0.09506  0.28968 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -0.470913   0.563453  -0.836  0.40912   
+F$Temp       0.027190   0.019420   1.400  0.17053   
+F$PopPC      0.191251   0.056004   3.415  0.00167 **
+F$LD50_mean  0.003907   0.001589   2.458  0.01920 * 
+F$GluCanS    0.064174   0.063496   1.011  0.31931   
+F$TGANorm   -0.010820   0.623322  -0.017  0.98625   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1562 on 34 degrees of freedom
+Multiple R-squared:  0.3198,	Adjusted R-squared:  0.2198 
+F-statistic: 3.198 on 5 and 34 DF,  p-value: 0.01796
+
+Anova Table (Type II tests)
+
+Response: F$Starve_Night_percent
+             Sum Sq Df F value   Pr(>F)   
+F$Temp      0.04784  1  1.9604 0.170527   
+F$Pop       0.28456  1 11.6621 0.001667 **
+F$LD50_mean 0.14748  1  6.0439 0.019204 * 
+F$GluCanS   0.02492  1  1.0215 0.319313   
+F$TGANorm   0.00001  1  0.0003 0.986252   
+Residuals   0.82962 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Sleep_ALL_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.20448 -0.08484 -0.00170  0.06729  0.41352 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  1.138e+00  5.014e-01   2.269   0.0297 *
+F$Temp       5.204e-05  1.728e-02   0.003   0.9976  
+F$PopPC     -7.989e-02  4.983e-02  -1.603   0.1181  
+F$LD50_mean  1.496e-03  1.414e-03   1.058   0.2976  
+F$GluCanS   -5.677e-02  5.650e-02  -1.005   0.3221  
+F$TGANorm    6.680e-03  5.547e-01   0.012   0.9905  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.139 on 34 degrees of freedom
+Multiple R-squared:  0.184,	Adjusted R-squared:  0.06396 
+F-statistic: 1.533 on 5 and 34 DF,  p-value: 0.2057
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_ALL_meanMove
+             Sum Sq Df F value Pr(>F)
+F$Temp      0.00000  1  0.0000 0.9976
+F$Pop       0.04966  1  2.5701 0.1181
+F$LD50_mean 0.02162  1  1.1189 0.2976
+F$GluCanS   0.01951  1  1.0096 0.3221
+F$TGANorm   0.00000  1  0.0001 0.9905
+Residuals   0.65692 34               
+
+Call:
+lm(formula = F$Sleep_Day_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.21761 -0.09610 -0.00741  0.07664  0.36730 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)  0.417299   0.488645   0.854    0.399
+F$Temp       0.020672   0.016841   1.227    0.228
+F$PopPC     -0.016707   0.048568  -0.344    0.733
+F$LD50_mean  0.001542   0.001378   1.119    0.271
+F$GluCanS   -0.022975   0.055066  -0.417    0.679
+F$TGANorm    0.075682   0.540565   0.140    0.889
+
+Residual standard error: 0.1355 on 34 degrees of freedom
+Multiple R-squared:  0.1208,	Adjusted R-squared:  -0.008528 
+F-statistic: 0.934 on 5 and 34 DF,  p-value: 0.4714
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_Day_meanMove
+             Sum Sq Df F value Pr(>F)
+F$Temp      0.02765  1  1.5066 0.2281
+F$Pop       0.00217  1  0.1183 0.7330
+F$LD50_mean 0.02298  1  1.2523 0.2710
+F$GluCanS   0.00319  1  0.1741 0.6791
+F$TGANorm   0.00036  1  0.0196 0.8895
+Residuals   0.62395 34               
+
+Call:
+lm(formula = F$Sleep_Night_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.34964 -0.20231 -0.01996  0.19069  0.63963 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  3.2040201  0.9037239   3.545  0.00117 **
+F$Temp      -0.0495232  0.0311471  -1.590  0.12110   
+F$PopPC      0.0919012  0.0898245   1.023  0.31348   
+F$LD50_mean  0.0004134  0.0025491   0.162  0.87212   
+F$GluCanS   -0.0144123  0.1018417  -0.142  0.88830   
+F$TGANorm   -0.9257912  0.9997476  -0.926  0.36096   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2505 on 34 degrees of freedom
+Multiple R-squared:  0.2116,	Adjusted R-squared:  0.09562 
+F-statistic: 1.825 on 5 and 34 DF,  p-value: 0.1343
+
+Anova Table (Type II tests)
+
+Response: F$Sleep_Night_meanMove
+             Sum Sq Df F value Pr(>F)
+F$Temp      0.15869  1  2.5280 0.1211
+F$Pop       0.06571  1  1.0468 0.3135
+F$LD50_mean 0.00165  1  0.0263 0.8721
+F$GluCanS   0.00126  1  0.0200 0.8883
+F$TGANorm   0.05383  1  0.8575 0.3610
+Residuals   2.13421 34               
+
+Call:
+lm(formula = F$Starve_ALL_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.28563 -0.12022  0.00232  0.06284  0.68258 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  1.068314   0.640436   1.668   0.1045  
+F$Temp       0.014162   0.022073   0.642   0.5254  
+F$PopPC     -0.112299   0.063655  -1.764   0.0867 .
+F$LD50_mean  0.001105   0.001806   0.612   0.5447  
+F$GluCanS   -0.061488   0.072171  -0.852   0.4002  
+F$TGANorm   -0.252343   0.708485  -0.356   0.7239  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1775 on 34 degrees of freedom
+Multiple R-squared:  0.1876,	Adjusted R-squared:  0.06817 
+F-statistic: 1.571 on 5 and 34 DF,  p-value: 0.1948
+
+Anova Table (Type II tests)
+
+Response: F$Starve_ALL_meanMove
+             Sum Sq Df F value  Pr(>F)  
+F$Temp      0.01298  1  0.4117 0.52542  
+F$Pop       0.09811  1  3.1123 0.08669 .
+F$LD50_mean 0.01180  1  0.3744 0.54470  
+F$GluCanS   0.02288  1  0.7258 0.40020  
+F$TGANorm   0.00400  1  0.1269 0.72391  
+Residuals   1.07181 34                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Starve_Day_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27602 -0.07215 -0.01043  0.07024  0.47251 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  0.304993   0.562293   0.542   0.5911  
+F$Temp       0.036656   0.019380   1.891   0.0671 .
+F$PopPC     -0.055172   0.055888  -0.987   0.3305  
+F$LD50_mean  0.001515   0.001586   0.955   0.3462  
+F$GluCanS   -0.007654   0.063365  -0.121   0.9046  
+F$TGANorm   -0.297278   0.622039  -0.478   0.6358  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1559 on 34 degrees of freedom
+Multiple R-squared:  0.1998,	Adjusted R-squared:  0.08214 
+F-statistic: 1.698 on 5 and 34 DF,  p-value: 0.1617
+
+Anova Table (Type II tests)
+
+Response: F$Starve_Day_meanMove
+             Sum Sq Df F value Pr(>F)  
+F$Temp      0.08694  1  3.5777 0.0671 .
+F$Pop       0.02368  1  0.9745 0.3305  
+F$LD50_mean 0.02217  1  0.9123 0.3462  
+F$GluCanS   0.00035  1  0.0146 0.9046  
+F$TGANorm   0.00555  1  0.2284 0.6358  
+Residuals   0.82621 34                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$Starve_Night_meanMove ~ F$Temp + F$Pop + F$LD50_mean + 
+    F$GluCanS + F$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.57646 -0.17511 -0.00038  0.15976  0.51048 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  1.808458   0.961956   1.880   0.0687 .
+F$Temp      -0.020997   0.033154  -0.633   0.5308  
+F$PopPC      0.101132   0.095612   1.058   0.2976  
+F$LD50_mean  0.006011   0.002713   2.215   0.0336 *
+F$GluCanS   -0.079384   0.108404  -0.732   0.4690  
+F$TGANorm   -0.172387   1.064167  -0.162   0.8723  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2667 on 34 degrees of freedom
+Multiple R-squared:  0.2205,	Adjusted R-squared:  0.1059 
+F-statistic: 1.924 on 5 and 34 DF,  p-value: 0.116
+
+Anova Table (Type II tests)
+
+Response: F$Starve_Night_meanMove
+             Sum Sq Df F value  Pr(>F)  
+F$Temp      0.02852  1  0.4011 0.53077  
+F$Pop       0.07957  1  1.1188 0.29764  
+F$LD50_mean 0.34898  1  4.9068 0.03355 *
+F$GluCanS   0.03814  1  0.5363 0.46900  
+F$TGANorm   0.00187  1  0.0262 0.87227  
+Residuals   2.41811 34                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Sleep_ALL_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.177054 -0.041569  0.000165  0.050365  0.143669 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)   
+(Intercept) 0.245029   0.389547   0.629  0.53355   
+M$Temp      0.011206   0.013096   0.856  0.39817   
+M$PopPC     0.077670   0.026861   2.892  0.00664 **
+M$LD50_mean 0.001526   0.001482   1.030  0.31038   
+M$GluCanS   0.004986   0.027829   0.179  0.85887   
+M$TGANorm   0.079343   0.283773   0.280  0.78148   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07536 on 34 degrees of freedom
+Multiple R-squared:  0.2183,	Adjusted R-squared:  0.1033 
+F-statistic: 1.898 on 5 and 34 DF,  p-value: 0.1204
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_ALL_percent
+              Sum Sq Df F value   Pr(>F)   
+M$Temp      0.004158  1  0.7322 0.398166   
+M$Pop       0.047477  1  8.3610 0.006638 **
+M$LD50_mean 0.006022  1  1.0604 0.310384   
+M$GluCanS   0.000182  1  0.0321 0.858865   
+M$TGANorm   0.000444  1  0.0782 0.781479   
+Residuals   0.193067 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Sleep_Day_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.15270 -0.06239 -0.01613  0.06777  0.17724 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) -0.233647   0.454174  -0.514    0.610
+M$Temp       0.021138   0.015269   1.384    0.175
+M$PopPC      0.044821   0.031317   1.431    0.162
+M$LD50_mean  0.002397   0.001727   1.388    0.174
+M$GluCanS    0.002794   0.032446   0.086    0.932
+M$TGANorm    0.299806   0.330852   0.906    0.371
+
+Residual standard error: 0.08786 on 34 degrees of freedom
+Multiple R-squared:  0.1343,	Adjusted R-squared:  0.006983 
+F-statistic: 1.055 on 5 and 34 DF,  p-value: 0.4022
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_Day_percent
+              Sum Sq Df F value Pr(>F)
+M$Temp      0.014793  1  1.9165 0.1753
+M$Pop       0.015811  1  2.0483 0.1615
+M$LD50_mean 0.014867  1  1.9261 0.1742
+M$GluCanS   0.000057  1  0.0074 0.9319
+M$TGANorm   0.006338  1  0.8211 0.3712
+Residuals   0.262442 34               
+
+Call:
+lm(formula = M$Sleep_Night_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.25602 -0.03979  0.02814  0.05296  0.12242 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  0.7264762  0.4701625   1.545   0.1316   
+M$Temp       0.0011559  0.0158063   0.073   0.9421   
+M$PopPC      0.1111736  0.0324199   3.429   0.0016 **
+M$LD50_mean  0.0006513  0.0017881   0.364   0.7179   
+M$GluCanS    0.0064815  0.0335886   0.193   0.8481   
+M$TGANorm   -0.1409573  0.3424992  -0.412   0.6832   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09095 on 34 degrees of freedom
+Multiple R-squared:  0.313,	Adjusted R-squared:  0.212 
+F-statistic: 3.099 on 5 and 34 DF,  p-value: 0.0207
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_Night_percent
+              Sum Sq Df F value   Pr(>F)   
+M$Temp      0.000044  1  0.0053 0.942134   
+M$Pop       0.097272  1 11.7593 0.001604 **
+M$LD50_mean 0.001097  1  0.1327 0.717939   
+M$GluCanS   0.000308  1  0.0372 0.848134   
+M$TGANorm   0.001401  1  0.1694 0.683248   
+Residuals   0.281245 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Starve_ALL_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.163698 -0.064376  0.005424  0.050574  0.179512 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.521756   0.441235  -1.182   0.2452  
+M$Temp       0.028330   0.014834   1.910   0.0646 .
+M$PopPC      0.074160   0.030425   2.437   0.0202 *
+M$LD50_mean  0.004404   0.001678   2.625   0.0129 *
+M$GluCanS    0.007532   0.031522   0.239   0.8126  
+M$TGANorm    0.213767   0.321426   0.665   0.5105  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08535 on 34 degrees of freedom
+Multiple R-squared:  0.2551,	Adjusted R-squared:  0.1456 
+F-statistic: 2.329 on 5 and 34 DF,  p-value: 0.06376
+
+Anova Table (Type II tests)
+
+Response: M$Starve_ALL_percent
+              Sum Sq Df F value  Pr(>F)  
+M$Temp      0.026572  1  3.6473 0.06463 .
+M$Pop       0.043283  1  5.9412 0.02017 *
+M$LD50_mean 0.050188  1  6.8889 0.01290 *
+M$GluCanS   0.000416  1  0.0571 0.81259  
+M$TGANorm   0.003222  1  0.4423 0.51050  
+Residuals   0.247701 34                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Starve_Day_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.14086 -0.04902 -0.01038  0.04693  0.18861 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept) -0.474501   0.422257  -1.124   0.2690  
+M$Temp       0.029746   0.014196   2.095   0.0437 *
+M$PopPC      0.021146   0.029117   0.726   0.4726  
+M$LD50_mean  0.001123   0.001606   0.699   0.4892  
+M$GluCanS   -0.005372   0.030166  -0.178   0.8597  
+M$TGANorm    0.326813   0.307602   1.062   0.2955  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.08168 on 34 degrees of freedom
+Multiple R-squared:  0.3255,	Adjusted R-squared:  0.2263 
+F-statistic: 3.281 on 5 and 34 DF,  p-value: 0.01594
+
+Anova Table (Type II tests)
+
+Response: M$Starve_Day_percent
+              Sum Sq Df F value  Pr(>F)  
+M$Temp      0.029295  1  4.3907 0.04366 *
+M$Pop       0.003519  1  0.5275 0.47265  
+M$LD50_mean 0.003262  1  0.4889 0.48919  
+M$GluCanS   0.000212  1  0.0317 0.85973  
+M$TGANorm   0.007532  1  1.1288 0.29552  
+Residuals   0.226852 34                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Starve_Night_percent ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27515 -0.09967  0.01219  0.07855  0.26904 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -0.565091   0.722812  -0.782  0.43975   
+M$Temp       0.026914   0.024300   1.108  0.27583   
+M$PopPC      0.125398   0.049841   2.516  0.01676 * 
+M$LD50_mean  0.007575   0.002749   2.755  0.00935 **
+M$GluCanS    0.019965   0.051638   0.387  0.70144   
+M$TGANorm    0.099920   0.526546   0.190  0.85062   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1398 on 34 degrees of freedom
+Multiple R-squared:  0.3422,	Adjusted R-squared:  0.2454 
+F-statistic: 3.537 on 5 and 34 DF,  p-value: 0.01109
+
+Anova Table (Type II tests)
+
+Response: M$Starve_Night_percent
+             Sum Sq Df F value   Pr(>F)   
+M$Temp      0.02398  1  1.2267 0.275828   
+M$Pop       0.12375  1  6.3300 0.016759 * 
+M$LD50_mean 0.14844  1  7.5924 0.009351 **
+M$GluCanS   0.00292  1  0.1495 0.701440   
+M$TGANorm   0.00070  1  0.0360 0.850622   
+Residuals   0.66472 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Sleep_ALL_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.46730 -0.06767  0.01777  0.10531  0.38603 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept)  1.4209943  0.9643370   1.474  0.14980   
+M$Temp       0.0050626  0.0324199   0.156  0.87683   
+M$PopPC     -0.1906576  0.0664955  -2.867  0.00706 **
+M$LD50_mean  0.0006389  0.0036675   0.174  0.86273   
+M$GluCanS   -0.0183235  0.0688926  -0.266  0.79187   
+M$TGANorm    0.3735155  0.7024904   0.532  0.59839   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1865 on 34 degrees of freedom
+Multiple R-squared:  0.2723,	Adjusted R-squared:  0.1652 
+F-statistic: 2.544 on 5 and 34 DF,  p-value: 0.04643
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_ALL_meanMove
+             Sum Sq Df F value   Pr(>F)   
+M$Temp      0.00085  1  0.0244 0.876834   
+M$Pop       0.28608  1  8.2210 0.007061 **
+M$LD50_mean 0.00106  1  0.0303 0.862732   
+M$GluCanS   0.00246  1  0.0707 0.791867   
+M$TGANorm   0.00984  1  0.2827 0.598390   
+Residuals   1.18317 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Sleep_Day_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.33578 -0.10311  0.01831  0.09030  0.43404 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  0.534451   0.853710   0.626   0.5355  
+M$Temp       0.029519   0.028701   1.029   0.3110  
+M$PopPC     -0.100375   0.058867  -1.705   0.0973 .
+M$LD50_mean  0.002269   0.003247   0.699   0.4894  
+M$GluCanS    0.032567   0.060989   0.534   0.5968  
+M$TGANorm   -0.154621   0.621902  -0.249   0.8051  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1651 on 34 degrees of freedom
+Multiple R-squared:  0.1317,	Adjusted R-squared:  0.004053 
+F-statistic: 1.032 on 5 and 34 DF,  p-value: 0.4148
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_Day_meanMove
+             Sum Sq Df F value Pr(>F)  
+M$Temp      0.02885  1  1.0578 0.3110  
+M$Pop       0.07929  1  2.9074 0.0973 .
+M$LD50_mean 0.01332  1  0.4883 0.4894  
+M$GluCanS   0.00778  1  0.2851 0.5968  
+M$TGANorm   0.00169  1  0.0618 0.8051  
+Residuals   0.92728 34                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Sleep_Night_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.57549 -0.18655  0.02211  0.17033  0.67160 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)  3.550105   1.624206   2.186   0.0358 *
+M$Temp      -0.057877   0.054604  -1.060   0.2966  
+M$PopPC     -0.051737   0.111997  -0.462   0.6471  
+M$LD50_mean -0.001301   0.006177  -0.211   0.8345  
+M$GluCanS   -0.065702   0.116034  -0.566   0.5750  
+M$TGANorm    1.087615   1.183185   0.919   0.3645  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3142 on 34 degrees of freedom
+Multiple R-squared:  0.1012,	Adjusted R-squared:  -0.03098 
+F-statistic: 0.7656 on 5 and 34 DF,  p-value: 0.581
+
+Anova Table (Type II tests)
+
+Response: M$Sleep_Night_meanMove
+            Sum Sq Df F value Pr(>F)
+M$Temp      0.1109  1  1.1235 0.2966
+M$Pop       0.0211  1  0.2134 0.6471
+M$LD50_mean 0.0044  1  0.0443 0.8345
+M$GluCanS   0.0317  1  0.3206 0.5750
+M$TGANorm   0.0834  1  0.8450 0.3645
+Residuals   3.3564 34               
+
+Call:
+lm(formula = M$Starve_ALL_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.38504 -0.09185 -0.00887  0.10325  0.58765 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -0.809208   1.061792  -0.762  0.45125   
+M$Temp       0.101556   0.035696   2.845  0.00747 **
+M$PopPC     -0.132266   0.073215  -1.807  0.07969 . 
+M$LD50_mean  0.006545   0.004038   1.621  0.11430   
+M$GluCanS   -0.019786   0.075855  -0.261  0.79578   
+M$TGANorm   -0.846479   0.773483  -1.094  0.28148   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2054 on 34 degrees of freedom
+Multiple R-squared:  0.3843,	Adjusted R-squared:  0.2937 
+F-statistic: 4.244 on 5 and 34 DF,  p-value: 0.004181
+
+Anova Table (Type II tests)
+
+Response: M$Starve_ALL_meanMove
+             Sum Sq Df F value   Pr(>F)   
+M$Temp      0.34147  1  8.0941 0.007469 **
+M$Pop       0.13768  1  3.2635 0.079695 . 
+M$LD50_mean 0.11083  1  2.6270 0.114297   
+M$GluCanS   0.00287  1  0.0680 0.795785   
+M$TGANorm   0.05053  1  1.1977 0.281484   
+Residuals   1.43439 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Starve_Day_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.3812 -0.1709  0.0330  0.1116  0.6092 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -1.6485202  1.1121028  -1.482  0.14746   
+M$Temp       0.1236354  0.0373876   3.307  0.00223 **
+M$PopPC     -0.0625190  0.0766847  -0.815  0.42059   
+M$LD50_mean  0.0089865  0.0042295   2.125  0.04096 * 
+M$GluCanS   -0.0007006  0.0794490  -0.009  0.99302   
+M$TGANorm   -1.1660911  0.8101333  -1.439  0.15919   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2151 on 34 degrees of freedom
+Multiple R-squared:  0.352,	Adjusted R-squared:  0.2567 
+F-statistic: 3.694 on 5 and 34 DF,  p-value: 0.008902
+
+Anova Table (Type II tests)
+
+Response: M$Starve_Day_meanMove
+             Sum Sq Df F value   Pr(>F)   
+M$Temp      0.50609  1 10.9353 0.002234 **
+M$Pop       0.03076  1  0.6647 0.420590   
+M$LD50_mean 0.20893  1  4.5145 0.040960 * 
+M$GluCanS   0.00000  1  0.0001 0.993016   
+M$TGANorm   0.09589  1  2.0718 0.159186   
+Residuals   1.57354 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$Starve_Night_meanMove ~ M$Temp + M$Pop + M$LD50_mean + 
+    M$GluCanS + M$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.63002 -0.14360 -0.00442  0.16927  0.66193 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -1.096865   1.564090  -0.701  0.48790   
+M$Temp       0.101183   0.052583   1.924  0.06273 . 
+M$PopPC     -0.022193   0.107851  -0.206  0.83820   
+M$LD50_mean  0.018398   0.005948   3.093  0.00395 **
+M$GluCanS   -0.047629   0.111739  -0.426  0.67261   
+M$TGANorm   -0.949354   1.139392  -0.833  0.41054   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3026 on 34 degrees of freedom
+Multiple R-squared:  0.3004,	Adjusted R-squared:  0.1976 
+F-statistic: 2.921 on 5 and 34 DF,  p-value: 0.02678
+
+Anova Table (Type II tests)
+
+Response: M$Starve_Night_meanMove
+             Sum Sq Df F value   Pr(>F)   
+M$Temp      0.33897  1  3.7027 0.062726 . 
+M$Pop       0.00388  1  0.0423 0.838198   
+M$LD50_mean 0.87573  1  9.5661 0.003945 **
+M$GluCanS   0.01663  1  0.1817 0.672610   
+M$TGANorm   0.06355  1  0.6942 0.410541   
+Residuals   3.11252 34                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = x$LD50_mean ~ x$Sex + x$Pop + x$Temp + x$Sleep_ALL_percent + 
+    x$Starve_ALL_percent + x$PerChange + x$Sleep_ALL_meanMove + 
+    x$Starve_ALL_meanMove + x$GluCanS + x$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-23.262  -7.427   0.650   6.719  29.255 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            162.9447    31.0509   5.248 1.61e-06 ***
+x$SexM                 -31.2569     4.7014  -6.648 5.73e-09 ***
+x$PopPC                -14.0918     3.2169  -4.380 4.13e-05 ***
+x$Temp                  -6.8409     0.8737  -7.830 4.09e-11 ***
+x$Sleep_ALL_percent   -266.9362   123.5965  -2.160  0.03427 *  
+x$Starve_ALL_percent   402.3289   145.7360   2.761  0.00738 ** 
+x$PerChange             -2.0984     0.8892  -2.360  0.02111 *  
+x$Sleep_ALL_meanMove   -15.0750    10.6890  -1.410  0.16293    
+x$Starve_ALL_meanMove   20.0192     9.0712   2.207  0.03065 *  
+x$GluCanS                2.5687     3.1466   0.816  0.41711    
+x$TGANorm               40.4188    32.1423   1.257  0.21281    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.52 on 69 degrees of freedom
+Multiple R-squared:  0.8079,	Adjusted R-squared:  0.7801 
+F-statistic: 29.02 on 10 and 69 DF,  p-value: < 2.2e-16
+
+Anova Table (Type II tests)
+
+Response: x$LD50_mean
+                      Sum Sq Df F value    Pr(>F)    
+x$Sex                 5868.6  1 44.2023 5.733e-09 ***
+x$Pop                 2547.6  1 19.1887 4.129e-05 ***
+x$Temp                8140.2  1 61.3114 4.087e-11 ***
+x$Sleep_ALL_percent    619.3  1  4.6645  0.034270 *  
+x$Starve_ALL_percent  1011.9  1  7.6213  0.007383 ** 
+x$PerChange            739.4  1  5.5691  0.021114 *  
+x$Sleep_ALL_meanMove   264.1  1  1.9890  0.162934    
+x$Starve_ALL_meanMove  646.6  1  4.8704  0.030651 *  
+x$GluCanS               88.5  1  0.6664  0.417114    
+x$TGANorm              209.9  1  1.5813  0.212814    
+Residuals             9161.0 69                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = M$LD50_mean ~ M$Pop + M$Temp + M$Sleep_ALL_percent + 
+    M$Starve_ALL_percent + M$PerChange + M$Sleep_ALL_meanMove + 
+    M$Starve_ALL_meanMove + M$GluCanS + M$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-18.232  -2.511   1.067   3.098  13.541 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            173.8979    24.3124   7.153 5.87e-08 ***
+M$PopPC                 -5.5608     2.7697  -2.008 0.053756 .  
+M$Temp                  -7.7930     0.6625 -11.764 9.15e-13 ***
+M$Sleep_ALL_percent   -338.4825    93.6845  -3.613 0.001092 ** 
+M$Starve_ALL_percent   444.4524   112.5071   3.950 0.000437 ***
+M$PerChange             -2.4619     0.7083  -3.476 0.001576 ** 
+M$Sleep_ALL_meanMove   -11.9382     7.0929  -1.683 0.102733    
+M$Starve_ALL_meanMove   18.0072     6.0376   2.982 0.005632 ** 
+M$GluCanS               -1.1745     2.3854  -0.492 0.626055    
+M$TGANorm               27.2584    24.7257   1.102 0.279040    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.426 on 30 degrees of freedom
+Multiple R-squared:  0.8883,	Adjusted R-squared:  0.8548 
+F-statistic: 26.52 on 9 and 30 DF,  p-value: 6.475e-12
+
+Anova Table (Type II tests)
+
+Response: M$LD50_mean
+                      Sum Sq Df  F value    Pr(>F)    
+M$Pop                  166.4  1   4.0309 0.0537558 .  
+M$Temp                5714.2  1 138.3872 9.155e-13 ***
+M$Sleep_ALL_percent    539.0  1  13.0538 0.0010925 ** 
+M$Starve_ALL_percent   644.4  1  15.6060 0.0004375 ***
+M$PerChange            498.8  1  12.0793 0.0015759 ** 
+M$Sleep_ALL_meanMove   117.0  1   2.8329 0.1027335    
+M$Starve_ALL_meanMove  367.3  1   8.8953 0.0056323 ** 
+M$GluCanS               10.0  1   0.2424 0.6260552    
+M$TGANorm               50.2  1   1.2154 0.2790403    
+Residuals             1238.7 30                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = F$LD50_mean ~ F$Pop + F$Temp + F$Sleep_ALL_percent + 
+    F$Starve_ALL_percent + F$PerChange + F$Sleep_ALL_meanMove + 
+    F$Starve_ALL_meanMove + F$GluCanS + F$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-26.316  -8.335   1.047   9.319  23.958 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(>|t|)   
+(Intercept)             93.237     62.337   1.496  0.14518   
+F$PopPC                -18.933      5.449  -3.475  0.00158 **
+F$Temp                  -5.472      1.770  -3.091  0.00428 **
+F$Sleep_ALL_percent   -117.329    269.866  -0.435  0.66684   
+F$Starve_ALL_percent   272.890    307.682   0.887  0.38218   
+F$PerChange             -1.235      1.844  -0.670  0.50803   
+F$Sleep_ALL_meanMove   -10.092     29.764  -0.339  0.73691   
+F$Starve_ALL_meanMove   31.471     26.520   1.187  0.24467   
+F$GluCanS                6.636      6.388   1.039  0.30718   
+F$TGANorm               56.258     60.250   0.934  0.35789   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 14.39 on 30 degrees of freedom
+Multiple R-squared:  0.689,	Adjusted R-squared:  0.5957 
+F-statistic: 7.386 on 9 and 30 DF,  p-value: 1.346e-05
+
+Anova Table (Type II tests)
+
+Response: F$LD50_mean
+                      Sum Sq Df F value  Pr(>F)   
+F$Pop                 2500.2  1 12.0731 0.00158 **
+F$Temp                1978.8  1  9.5553 0.00428 **
+F$Sleep_ALL_percent     39.1  1  0.1890 0.66684   
+F$Starve_ALL_percent   162.9  1  0.7866 0.38218   
+F$PerChange             92.9  1  0.4488 0.50803   
+F$Sleep_ALL_meanMove    23.8  1  0.1150 0.73691   
+F$Starve_ALL_meanMove  291.6  1  1.4082 0.24467   
+F$GluCanS              223.5  1  1.0792 0.30718   
+F$TGANorm              180.6  1  0.8719 0.35789   
+Residuals             6212.6 30                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = FFD$LD50_mean ~ FFD$Sex + FFD$Temp + FFD$Sleep_ALL_percent + 
+    FFD$Starve_ALL_percent + FFD$PerChange + FFD$Sleep_ALL_meanMove + 
+    FFD$Starve_ALL_meanMove + FFD$GluCanS + FFD$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-19.6176  -3.7250   0.0583   5.5639  29.2033 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)              211.021     51.543   4.094 0.000295 ***
+FFD$SexM                 -36.978      6.524  -5.668 3.54e-06 ***
+FFD$Temp                  -7.401      1.397  -5.298 1.00e-05 ***
+FFD$Sleep_ALL_percent   -133.438    184.348  -0.724 0.474774    
+FFD$Starve_ALL_percent   199.754    225.771   0.885 0.383320    
+FFD$PerChange             -1.157      1.318  -0.877 0.387223    
+FFD$Sleep_ALL_meanMove    -4.205     15.296  -0.275 0.785268    
+FFD$Starve_ALL_meanMove   12.590     15.948   0.789 0.436073    
+FFD$GluCanS                1.193      4.793   0.249 0.805165    
+FFD$TGANorm               47.060     41.733   1.128 0.268408    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.11 on 30 degrees of freedom
+Multiple R-squared:  0.8472,	Adjusted R-squared:  0.8014 
+F-statistic: 18.48 on 9 and 30 DF,  p-value: 6.128e-10
+
+Anova Table (Type II tests)
+
+Response: FFD$LD50_mean
+                        Sum Sq Df F value    Pr(>F)    
+FFD$Sex                 3963.5  1 32.1276 3.537e-06 ***
+FFD$Temp                3463.3  1 28.0728 1.003e-05 ***
+FFD$Sleep_ALL_percent     64.6  1  0.5239    0.4748    
+FFD$Starve_ALL_percent    96.6  1  0.7828    0.3833    
+FFD$PerChange             95.0  1  0.7699    0.3872    
+FFD$Sleep_ALL_meanMove     9.3  1  0.0756    0.7853    
+FFD$Starve_ALL_meanMove   76.9  1  0.6232    0.4361    
+FFD$GluCanS                7.6  1  0.0619    0.8052    
+FFD$TGANorm              156.9  1  1.2716    0.2684    
+Residuals               3701.0 30                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = PC$LD50_mean ~ PC$Sex + PC$Temp + PC$Sleep_ALL_percent + 
+    PC$Starve_ALL_percent + PC$PerChange + PC$Sleep_ALL_meanMove + 
+    PC$Starve_ALL_meanMove + PC$GluCanS + PC$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-18.8836  -5.7218   0.5255   6.0106  26.2580 
+
+Coefficients:
+                       Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            190.3232    47.0040   4.049 0.000334 ***
+PC$SexM                -18.5433     8.3915  -2.210 0.034895 *  
+PC$Temp                 -5.0503     1.1320  -4.461 0.000106 ***
+PC$Sleep_ALL_percent    66.5544   223.5223   0.298 0.767944    
+PC$Starve_ALL_percent   16.2555   270.7038   0.060 0.952515    
+PC$PerChange             1.0040     1.8028   0.557 0.581735    
+PC$Sleep_ALL_meanMove  -23.1235    19.0945  -1.211 0.235348    
+PC$Starve_ALL_meanMove   9.0883    10.9822   0.828 0.414463    
+PC$GluCanS               0.9778     4.1865   0.234 0.816912    
+PC$TGANorm             -36.0524    55.7427  -0.647 0.522703    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 10.5 on 30 degrees of freedom
+Multiple R-squared:  0.8404,	Adjusted R-squared:  0.7925 
+F-statistic: 17.55 on 9 and 30 DF,  p-value: 1.146e-09
+
+Anova Table (Type II tests)
+
+Response: PC$LD50_mean
+                       Sum Sq Df F value    Pr(>F)    
+PC$Sex                  538.2  1  4.8831 0.0348949 *  
+PC$Temp                2193.9  1 19.9039 0.0001061 ***
+PC$Sleep_ALL_percent      9.8  1  0.0887 0.7679443    
+PC$Starve_ALL_percent     0.4  1  0.0036 0.9525149    
+PC$PerChange             34.2  1  0.3101 0.5817347    
+PC$Sleep_ALL_meanMove   161.6  1  1.4665 0.2353480    
+PC$Starve_ALL_meanMove   75.5  1  0.6848 0.4144633    
+PC$GluCanS                6.0  1  0.0546 0.8169123    
+PC$TGANorm               46.1  1  0.4183 0.5227032    
+Residuals              3306.8 30                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1

@@ -1,0 +1,1453 @@
+    Genotype   Pop     Sex         Temp      LD50_mean        LenF_mean    
+ FFD10  : 4   FFD:40   F:40   Min.   :21   Min.   : 40.00   Min.   :1.219  
+ FFD14  : 4   PC :40   M:40   1st Qu.:21   1st Qu.: 60.66   1st Qu.:1.369  
+ FFD16  : 4                   Median :23   Median : 81.00   Median :1.475  
+ FFD19  : 4                   Mean   :23   Mean   : 81.49   Mean   :1.472  
+ FFD2   : 4                   3rd Qu.:25   3rd Qu.: 97.75   3rd Qu.:1.548  
+ FFD22  : 4                   Max.   :25   Max.   :136.67   Max.   :1.771  
+ (Other):56                                                 NA's   :1      
+   LenQ_mean       PerChange          GluNorm           GluCanS     
+ Min.   :0.960   Min.   :-52.807   Min.   :0.02900   Min.   :0.583  
+ 1st Qu.:1.264   1st Qu.:-28.108   1st Qu.:0.04350   1st Qu.:1.140  
+ Median :1.369   Median :-18.498   Median :0.05000   Median :1.357  
+ Mean   :1.355   Mean   :-19.976   Mean   :0.05262   Mean   :1.478  
+ 3rd Qu.:1.432   3rd Qu.:-12.107   3rd Qu.:0.05600   3rd Qu.:1.693  
+ Max.   :1.647   Max.   :  2.792   Max.   :0.12800   Max.   :3.572  
+ NA's   :1                                                          
+    TGANorm          TGACanS      Sleep_ALL_percent Sleep_Day_percent
+ Min.   :0.1130   Min.   :0.780   Min.   :0.3530    Min.   :0.1280   
+ 1st Qu.:0.1857   1st Qu.:0.985   1st Qu.:0.5135    1st Qu.:0.3247   
+ Median :0.2100   Median :1.101   Median :0.5735    Median :0.3985   
+ Mean   :0.2184   Mean   :1.108   Mean   :0.5716    Mean   :0.3937   
+ 3rd Qu.:0.2415   3rd Qu.:1.244   3rd Qu.:0.6310    3rd Qu.:0.4923   
+ Max.   :0.3390   Max.   :1.582   Max.   :0.7670    Max.   :0.6480   
+                  NA's   :40                                         
+ Sleep_Night_percent Starve_ALL_percent Starve_Day_percent Starve_Night_percent
+ Min.   :0.5010      Min.   :0.1690     Min.   :0.1740     Min.   :0.2540      
+ 1st Qu.:0.7090      1st Qu.:0.3598     1st Qu.:0.2752     1st Qu.:0.4773      
+ Median :0.7830      Median :0.4500     Median :0.3670     Median :0.6380      
+ Mean   :0.7728      Mean   :0.4360     Mean   :0.3790     Mean   :0.6176      
+ 3rd Qu.:0.8755      3rd Qu.:0.5162     3rd Qu.:0.4823     3rd Qu.:0.7532      
+ Max.   :0.9540      Max.   :0.6850     Max.   :0.6500     Max.   :0.9530      
+                                                                               
+ Move_Starve_ALL Move_Sleep_Day   Move_Starve_Day Move_Sleep_Night
+ Min.   :0.814   Min.   :0.8120   Min.   :0.750   Min.   :1.467   
+ 1st Qu.:1.259   1st Qu.:0.9928   1st Qu.:1.170   1st Qu.:1.827   
+ Median :1.407   Median :1.1650   Median :1.290   Median :2.079   
+ Mean   :1.475   Mean   :1.1703   Mean   :1.339   Mean   :2.068   
+ 3rd Qu.:1.707   3rd Qu.:1.3200   3rd Qu.:1.502   3rd Qu.:2.281   
+ Max.   :2.174   Max.   :1.7900   Max.   :2.057   Max.   :2.942   
+                                                                  
+ Move_Starve_Night Move_Sleep_ALL 
+ Min.   :1.240     Min.   :0.934  
+ 1st Qu.:1.694     1st Qu.:1.136  
+ Median :1.976     Median :1.327  
+ Mean   :1.972     Mean   :1.343  
+ 3rd Qu.:2.270     3rd Qu.:1.537  
+ Max.   :2.688     Max.   :1.976  
+                                  
+Call:
+   manova(cbind(x$Sleep_Day_percent, x$Sleep_Night_percent, x$Starve_Day_percent, 
+    x$Starve_Night_percent, x$Move_Sleep_Day, x$Move_Sleep_Night, 
+    x$Move_Starve_Day, x$Move_Starve_Night, x$LD50_mean, x$LenF_mean, 
+    x$GluCanS, x$TGANorm) ~ x$Pop + x$Sex + x$Temp)
+
+Terms:
+                   x$Pop    x$Sex   x$Temp Residuals
+resp 1             0.000    0.401    0.064     0.601
+resp 2             0.152    0.006    0.281     0.665
+resp 3             0.018    0.166    0.401     0.479
+resp 4             0.093    0.057    0.531     1.938
+resp 5             0.077    1.882    0.056     1.538
+resp 6             0.001    1.884    0.751     5.444
+resp 7             0.171    2.145    0.526     2.835
+resp 8             0.119    2.729    0.494     7.085
+resp 9           2673.38 16921.01 13756.16  14258.56
+resp 10            0.116    0.673    0.388     0.153
+resp 11            0.552    0.231    6.150    15.651
+resp 12            0.007    0.005    0.003     0.153
+Deg. of Freedom        1        1        1        75
+
+Residual standard errors: 0.08948285 0.0941637 0.07991277 0.1607537 0.1431793 0.2694229 0.194423 0.3073599 13.78819 0.04519549 0.456812 0.04514627
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.00002 0.00002  0.0019  0.965077    
+x$Sex        1 0.40144 0.40144 50.1356 6.554e-10 ***
+x$Temp       1 0.06364 0.06364  7.9484  0.006153 ** 
+Residuals   75 0.60054 0.00801                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+            Df  Sum Sq  Mean Sq F value    Pr(>F)    
+x$Pop        1 0.15246 0.152459 17.1943 8.793e-05 ***
+x$Sex        1 0.00559 0.005594  0.6309    0.4295    
+x$Temp       1 0.28055 0.280553 31.6409 3.034e-07 ***
+Residuals   75 0.66501 0.008867                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.01831 0.01831   2.867   0.09457 .  
+x$Sex        1 0.16593 0.16593  25.984 2.501e-06 ***
+x$Temp       1 0.40128 0.40128  62.836 1.643e-11 ***
+Residuals   75 0.47895 0.00639                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.09338 0.09338  3.6137   0.06115 .  
+x$Sex        1 0.05695 0.05695  2.2037   0.14187    
+x$Temp       1 0.53109 0.53109 20.5515 2.157e-05 ***
+Residuals   75 1.93813 0.02584                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.07666 0.07666  3.7392   0.05692 .  
+x$Sex        1 1.88225 1.88225 91.8159 1.172e-14 ***
+x$Temp       1 0.05646 0.05646  2.7542   0.10118    
+Residuals   75 1.53752 0.02050                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 6 :
+            Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.0013 0.00134  0.0185  0.892221    
+x$Sex        1 1.8841 1.88413 25.9563 2.527e-06 ***
+x$Temp       1 0.7510 0.75101 10.3461  0.001916 ** 
+Residuals   75 5.4442 0.07259                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 7 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.17096 0.17096  4.5226  0.036740 *  
+x$Sex        1 2.14514 2.14514 56.7492 9.182e-11 ***
+x$Temp       1 0.52608 0.52608 13.9175  0.000369 ***
+Residuals   75 2.83502 0.03780                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 8 :
+            Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.1186 0.11863  1.2557   0.26604    
+x$Sex        1 2.7289 2.72887 28.8861 8.341e-07 ***
+x$Temp       1 0.4936 0.49359  5.2248   0.02509 *  
+Residuals   75 7.0853 0.09447                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 9 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1  2673.4  2673.4  14.062 0.0003459 ***
+x$Sex        1 16921.0 16921.0  89.004 2.232e-14 ***
+x$Temp       1 13756.2 13756.2  72.357 1.296e-12 ***
+Residuals   75 14258.6   190.1                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 10 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1 0.11631 0.11631  56.943 8.681e-11 ***
+x$Sex        1 0.67257 0.67257 329.268 < 2.2e-16 ***
+x$Temp       1 0.38775 0.38775 189.828 < 2.2e-16 ***
+Residuals   75 0.15320 0.00204                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 11 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop        1  0.5524  0.5524  2.6473    0.1079    
+x$Sex        1  0.2307  0.2307  1.1055    0.2964    
+x$Temp       1  6.1498  6.1498 29.4703 6.714e-07 ***
+Residuals   75 15.6508  0.2087                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 12 :
+            Df   Sum Sq   Mean Sq F value  Pr(>F)  
+x$Pop        1 0.007221 0.0072213  3.5430 0.06368 .
+x$Sex        1 0.004728 0.0047283  2.3199 0.13194  
+x$Temp       1 0.003179 0.0031790  1.5597 0.21559  
+Residuals   75 0.152864 0.0020382                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+1 observation deleted due to missingness
+Call:
+   manova(cbind(x$Sleep_ALL_percent, x$Starve_ALL_percent) ~ x$Temp + 
+    x$Sex + x$Pop + x$LD50_mean + x$LenF_mean + x$GluCanS + x$TGANorm)
+
+Terms:
+                   x$Temp     x$Sex     x$Pop x$LD50_mean x$LenF_mean x$GluCanS
+resp 1          0.1117529 0.0985033 0.0223567   0.0702540   0.0001347 0.0003011
+resp 2          0.1512244 0.0006724 0.0152842   0.1846248   0.0024307 0.0001879
+Deg. of Freedom         1         1         1           1           1         1
+                x$TGANorm Residuals
+resp 1          0.0020006 0.3712976
+resp 2          0.0098554 0.6234811
+Deg. of Freedom         1        71
+
+Residual standard errors: 0.07231558 0.09370925
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+            Df  Sum Sq  Mean Sq F value    Pr(>F)    
+x$Temp       1 0.11175 0.111753 21.3695 1.652e-05 ***
+x$Sex        1 0.09850 0.098503 18.8359 4.635e-05 ***
+x$Pop        1 0.02236 0.022357  4.2751 0.0423208 *  
+x$LD50_mean  1 0.07025 0.070254 13.4341 0.0004732 ***
+x$LenF_mean  1 0.00013 0.000135  0.0258 0.8729430    
+x$GluCanS    1 0.00030 0.000301  0.0576 0.8110556    
+x$TGANorm    1 0.00200 0.002001  0.3826 0.5382193    
+Residuals   71 0.37130 0.005230                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+            Df  Sum Sq  Mean Sq F value    Pr(>F)    
+x$Temp       1 0.15122 0.151224 17.2209 9.111e-05 ***
+x$Sex        1 0.00067 0.000672  0.0766    0.7828    
+x$Pop        1 0.01528 0.015284  1.7405    0.1913    
+x$LD50_mean  1 0.18462 0.184625 21.0245 1.898e-05 ***
+x$LenF_mean  1 0.00243 0.002431  0.2768    0.6004    
+x$GluCanS    1 0.00019 0.000188  0.0214    0.8841    
+x$TGANorm    1 0.00986 0.009855  1.1223    0.2930    
+Residuals   71 0.62348 0.008781                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+1 observation deleted due to missingness
+Call:
+   manova(cbind(x$Move_Sleep_ALL, x$Move_Starve_ALL) ~ x$Temp + 
+    x$Sex + x$Pop + x$LD50_mean + x$LenF_mean + x$GluCanS + x$TGANorm)
+
+Terms:
+                   x$Temp     x$Sex     x$Pop x$LD50_mean x$LenF_mean x$GluCanS
+resp 1          0.0082525 2.6652986 0.4349971   0.0147585   0.0079654 0.0128472
+resp 2          0.4249472 2.9009815 0.4112850   0.0461755   0.2046156 0.0238302
+Deg. of Freedom         1         1         1           1           1         1
+                x$TGANorm Residuals
+resp 1          0.0058950 1.7228681
+resp 2          0.0032599 2.8460465
+Deg. of Freedom         1        71
+
+Residual standard errors: 0.1557747 0.2002128
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+            Df  Sum Sq Mean Sq  F value    Pr(>F)    
+x$Temp       1 0.00825 0.00825   0.3401    0.5616    
+x$Sex        1 2.66530 2.66530 109.8379 4.626e-16 ***
+x$Pop        1 0.43500 0.43500  17.9264 6.770e-05 ***
+x$LD50_mean  1 0.01476 0.01476   0.6082    0.4381    
+x$LenF_mean  1 0.00797 0.00797   0.3283    0.5685    
+x$GluCanS    1 0.01285 0.01285   0.5294    0.4692    
+x$TGANorm    1 0.00590 0.00590   0.2429    0.6236    
+Residuals   71 1.72287 0.02427                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.42495 0.42495 10.6011  0.001734 ** 
+x$Sex        1 2.90098 2.90098 72.3705 1.918e-12 ***
+x$Pop        1 0.41129 0.41129 10.2603  0.002036 ** 
+x$LD50_mean  1 0.04618 0.04618  1.1519  0.286779    
+x$LenF_mean  1 0.20462 0.20462  5.1045  0.026935 *  
+x$GluCanS    1 0.02383 0.02383  0.5945  0.443246    
+x$TGANorm    1 0.00326 0.00326  0.0813  0.776341    
+Residuals   71 2.84605 0.04009                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+1 observation deleted due to missingness
+Call:
+   manova(cbind(x$Sleep_Day_percent, x$Starve_Day_percent, x$Sleep_Night_percent, 
+    x$Starve_Night_percent) ~ x$Temp + x$Sex + x$Pop + x$LD50_mean + 
+    x$LenF_mean + x$GluCanS + x$TGANorm)
+
+Terms:
+                   x$Temp     x$Sex     x$Pop x$LD50_mean x$LenF_mean x$GluCanS
+resp 1          0.0595644 0.4054839 0.0000558   0.1261780   0.0109556 0.0061879
+resp 2          0.4056587 0.1607364 0.0191245   0.0139877   0.0027226 0.0004717
+resp 3          0.2868266 0.0039593 0.1478207   0.0229764   0.0281280 0.0000329
+resp 4          0.5411850 0.0507546 0.0894793   0.2832473   0.0220191 0.0014336
+Deg. of Freedom         1         1         1           1           1         1
+                x$TGANorm Residuals
+resp 1          0.0080998 0.4491173
+resp 2          0.0230930 0.4386788
+resp 3          0.0123327 0.6015403
+resp 4          0.0011174 1.6303128
+Deg. of Freedom         1        71
+
+Residual standard errors: 0.07953361 0.07860391 0.09204563 0.1515327
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.05956 0.05956  9.4164  0.003044 ** 
+x$Sex        1 0.40548 0.40548 64.1021 1.627e-11 ***
+x$Pop        1 0.00006 0.00006  0.0088  0.925452    
+x$LD50_mean  1 0.12618 0.12618 19.9472 2.936e-05 ***
+x$LenF_mean  1 0.01096 0.01096  1.7320  0.192395    
+x$GluCanS    1 0.00619 0.00619  0.9782  0.325994    
+x$TGANorm    1 0.00810 0.00810  1.2805  0.261618    
+Residuals   71 0.44912 0.00633                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.40566 0.40566 65.6557 1.078e-11 ***
+x$Sex        1 0.16074 0.16074 26.0151 2.707e-06 ***
+x$Pop        1 0.01912 0.01912  3.0953   0.08283 .  
+x$LD50_mean  1 0.01399 0.01399  2.2639   0.13686    
+x$LenF_mean  1 0.00272 0.00272  0.4407   0.50896    
+x$GluCanS    1 0.00047 0.00047  0.0763   0.78313    
+x$TGANorm    1 0.02309 0.02309  3.7376   0.05719 .  
+Residuals   71 0.43868 0.00618                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+            Df  Sum Sq  Mean Sq F value    Pr(>F)    
+x$Temp       1 0.28683 0.286827 33.8542 1.576e-07 ***
+x$Sex        1 0.00396 0.003959  0.4673   0.49645    
+x$Pop        1 0.14782 0.147821 17.4473 8.280e-05 ***
+x$LD50_mean  1 0.02298 0.022976  2.7119   0.10402    
+x$LenF_mean  1 0.02813 0.028128  3.3200   0.07266 .  
+x$GluCanS    1 0.00003 0.000033  0.0039   0.95049    
+x$TGANorm    1 0.01233 0.012333  1.4556   0.23163    
+Residuals   71 0.60154 0.008472                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.54119 0.54119 23.5686  6.93e-06 ***
+x$Sex        1 0.05075 0.05075  2.2104 0.1415143    
+x$Pop        1 0.08948 0.08948  3.8968 0.0522691 .  
+x$LD50_mean  1 0.28325 0.28325 12.3354 0.0007772 ***
+x$LenF_mean  1 0.02202 0.02202  0.9589 0.3307811    
+x$GluCanS    1 0.00143 0.00143  0.0624 0.8034105    
+x$TGANorm    1 0.00112 0.00112  0.0487 0.8260411    
+Residuals   71 1.63031 0.02296                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+1 observation deleted due to missingness
+Call:
+   manova(cbind(x$Move_Sleep_Day, x$Move_Starve_Day, x$Move_Sleep_Night, 
+    x$Move_Starve_Night) ~ x$Temp + x$Sex + x$Pop + x$LD50_mean + 
+    x$LenF_mean + x$GluCanS + x$TGANorm)
+
+Terms:
+                  x$Temp    x$Sex    x$Pop x$LD50_mean x$LenF_mean x$GluCanS
+resp 1          0.067051 1.863452 0.084869    0.026686    0.003546  0.000295
+resp 2          0.561775 2.101682 0.178721    0.081413    0.101177  0.006164
+resp 3          0.720989 1.915437 0.000060    0.000735    0.014622  0.024487
+resp 4          0.457752 2.742957 0.140374    0.813755    0.442384  0.180557
+Deg. of Freedom        1        1        1           1           1         1
+                x$TGANorm Residuals
+resp 1           0.001422  1.505575
+resp 2           0.029193  2.617076
+resp 3           0.009642  5.394667
+resp 4           0.005369  5.643195
+Deg. of Freedom         1        71
+
+Residual standard errors: 0.1456203 0.1919902 0.2756469 0.2819248
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.06705 0.06705  3.1620   0.07965 .  
+x$Sex        1 1.86345 1.86345 87.8768 4.794e-14 ***
+x$Pop        1 0.08487 0.08487  4.0023   0.04926 *  
+x$LD50_mean  1 0.02669 0.02669  1.2585   0.26572    
+x$LenF_mean  1 0.00355 0.00355  0.1672   0.68383    
+x$GluCanS    1 0.00030 0.00030  0.0139   0.90639    
+x$TGANorm    1 0.00142 0.00142  0.0671   0.79640    
+Residuals   71 1.50557 0.02121                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.56178 0.56178 15.2407 0.0002131 ***
+x$Sex        1 2.10168 2.10168 57.0176 1.135e-10 ***
+x$Pop        1 0.17872 0.17872  4.8486 0.0309181 *  
+x$LD50_mean  1 0.08141 0.08141  2.2087 0.1416608    
+x$LenF_mean  1 0.10118 0.10118  2.7449 0.1019793    
+x$GluCanS    1 0.00616 0.00616  0.1672 0.6838309    
+x$TGANorm    1 0.02919 0.02919  0.7920 0.3765022    
+Residuals   71 2.61708 0.03686                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+            Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.7210 0.72099  9.4890   0.00294 ** 
+x$Sex        1 1.9154 1.91544 25.2094 3.678e-06 ***
+x$Pop        1 0.0001 0.00006  0.0008   0.97758    
+x$LD50_mean  1 0.0007 0.00074  0.0097   0.92192    
+x$LenF_mean  1 0.0146 0.01462  0.1924   0.66222    
+x$GluCanS    1 0.0245 0.02449  0.3223   0.57204    
+x$TGANorm    1 0.0096 0.00964  0.1269   0.72272    
+Residuals   71 5.3947 0.07598                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+            Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp       1 0.4578 0.45775  5.7592  0.019028 *  
+x$Sex        1 2.7430 2.74296 34.5106 1.255e-07 ***
+x$Pop        1 0.1404 0.14037  1.7661  0.188119    
+x$LD50_mean  1 0.8138 0.81375 10.2383  0.002057 ** 
+x$LenF_mean  1 0.4424 0.44238  5.5659  0.021069 *  
+x$GluCanS    1 0.1806 0.18056  2.2717  0.136194    
+x$TGANorm    1 0.0054 0.00537  0.0676  0.795685    
+Residuals   71 5.6432 0.07948                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+1 observation deleted due to missingness
+Call:
+   manova(cbind(Male_21$Sleep_Day_percent, Male_21$Sleep_Night_percent, 
+    Male_21$Starve_Day_percent, Male_21$Starve_Night_percent, 
+    Male_21$Move_Sleep_Day, Male_21$Move_Sleep_Night, Male_21$Move_Starve_Day, 
+    Male_21$Move_Starve_Night) ~ Male_21$Pop + Male_21$LD50_mean + 
+    Male_21$LenF_mean + Male_21$GluCanS + Male_21$TGANorm)
+
+Terms:
+                Male_21$Pop Male_21$LD50_mean Male_21$LenF_mean Male_21$GluCanS
+resp 1            0.0001860         0.0156807         0.0015684       0.0055234
+resp 2            0.0601704         0.0009130         0.0025328       0.0035440
+resp 3            0.0000242         0.0006301         0.0025942       0.0000077
+resp 4            0.0223112         0.1202127         0.0210818       0.0091750
+resp 5            0.0125500         0.0086890         0.0198276       0.0034048
+resp 6            0.0103512         0.0343057         0.1922772       0.0251690
+resp 7            0.0863298         0.0756886         0.0065060       0.0083540
+resp 8            0.0680944         0.7540863         0.0008074       0.1349982
+Deg. of Freedom           1                 1                 1               1
+                Male_21$TGANorm Residuals
+resp 1                0.0000677 0.1027843
+resp 2                0.0001957 0.1612045
+resp 3                0.0016004 0.1262932
+resp 4                0.0009012 0.3199044
+resp 5                0.0105959 0.2827176
+resp 6                0.0317038 1.1968560
+resp 7                0.0093214 0.2745874
+resp 8                0.0399457 1.2765196
+Deg. of Freedom               1        14
+
+Residual standard errors: 0.08568391 0.1073061 0.09497865 0.1511632 0.142106 0.2923862 0.1400478 0.3019602
+Estimated effects may be unbalanced
+ Response 1 :
+                  Df   Sum Sq   Mean Sq F value Pr(>F)
+Male_21$Pop        1 0.000186 0.0001860  0.0253 0.8758
+Male_21$LD50_mean  1 0.015681 0.0156807  2.1358 0.1660
+Male_21$LenF_mean  1 0.001568 0.0015684  0.2136 0.6510
+Male_21$GluCanS    1 0.005523 0.0055234  0.7523 0.4004
+Male_21$TGANorm    1 0.000068 0.0000677  0.0092 0.9248
+Residuals         14 0.102784 0.0073417               
+
+ Response 2 :
+                  Df   Sum Sq  Mean Sq F value  Pr(>F)  
+Male_21$Pop        1 0.060170 0.060170  5.2256 0.03836 *
+Male_21$LD50_mean  1 0.000913 0.000913  0.0793 0.78238  
+Male_21$LenF_mean  1 0.002533 0.002533  0.2200 0.64628  
+Male_21$GluCanS    1 0.003544 0.003544  0.3078 0.58780  
+Male_21$TGANorm    1 0.000196 0.000196  0.0170 0.89812  
+Residuals         14 0.161205 0.011515                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+                  Df   Sum Sq   Mean Sq F value Pr(>F)
+Male_21$Pop        1 0.000024 0.0000242  0.0027 0.9594
+Male_21$LD50_mean  1 0.000630 0.0006301  0.0698 0.7954
+Male_21$LenF_mean  1 0.002594 0.0025942  0.2876 0.6002
+Male_21$GluCanS    1 0.000008 0.0000077  0.0009 0.9771
+Male_21$TGANorm    1 0.001600 0.0016004  0.1774 0.6800
+Residuals         14 0.126293 0.0090209               
+
+ Response 4 :
+                  Df  Sum Sq  Mean Sq F value Pr(>F)  
+Male_21$Pop        1 0.02231 0.022311  0.9764 0.3399  
+Male_21$LD50_mean  1 0.12021 0.120213  5.2609 0.0378 *
+Male_21$LenF_mean  1 0.02108 0.021082  0.9226 0.3531  
+Male_21$GluCanS    1 0.00917 0.009175  0.4015 0.5365  
+Male_21$TGANorm    1 0.00090 0.000901  0.0394 0.8454  
+Residuals         14 0.31990 0.022850                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+                  Df   Sum Sq   Mean Sq F value Pr(>F)
+Male_21$Pop        1 0.012550 0.0125500  0.6215 0.4436
+Male_21$LD50_mean  1 0.008689 0.0086890  0.4303 0.5225
+Male_21$LenF_mean  1 0.019828 0.0198276  0.9819 0.3386
+Male_21$GluCanS    1 0.003405 0.0034048  0.1686 0.6876
+Male_21$TGANorm    1 0.010596 0.0105959  0.5247 0.4808
+Residuals         14 0.282718 0.0201941               
+
+ Response 6 :
+                  Df  Sum Sq  Mean Sq F value Pr(>F)
+Male_21$Pop        1 0.01035 0.010351  0.1211 0.7330
+Male_21$LD50_mean  1 0.03431 0.034306  0.4013 0.5366
+Male_21$LenF_mean  1 0.19228 0.192277  2.2491 0.1559
+Male_21$GluCanS    1 0.02517 0.025169  0.2944 0.5959
+Male_21$TGANorm    1 0.03170 0.031704  0.3708 0.5523
+Residuals         14 1.19686 0.085490               
+
+ Response 7 :
+                  Df   Sum Sq  Mean Sq F value  Pr(>F)  
+Male_21$Pop        1 0.086330 0.086330  4.4016 0.05454 .
+Male_21$LD50_mean  1 0.075689 0.075689  3.8590 0.06965 .
+Male_21$LenF_mean  1 0.006506 0.006506  0.3317 0.57379  
+Male_21$GluCanS    1 0.008354 0.008354  0.4259 0.52456  
+Male_21$TGANorm    1 0.009321 0.009321  0.4753 0.50185  
+Residuals         14 0.274587 0.019613                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 8 :
+                  Df  Sum Sq Mean Sq F value  Pr(>F)  
+Male_21$Pop        1 0.06809 0.06809  0.7468 0.40205  
+Male_21$LD50_mean  1 0.75409 0.75409  8.2703 0.01221 *
+Male_21$LenF_mean  1 0.00081 0.00081  0.0089 0.92636  
+Male_21$GluCanS    1 0.13500 0.13500  1.4806 0.24380  
+Male_21$TGANorm    1 0.03995 0.03995  0.4381 0.51879  
+Residuals         14 1.27652 0.09118                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+   manova(cbind(Male_25$Sleep_Day_percent, Male_25$Sleep_Night_percent, 
+    Male_25$Starve_Day_percent, Male_25$Starve_Night_percent, 
+    Male_25$Move_Sleep_Day, Male_25$Move_Sleep_Night, Male_25$Move_Starve_Day, 
+    Male_25$Move_Starve_Night) ~ Male_25$Pop + Male_25$LD50_mean + 
+    Male_25$LenF_mean + Male_25$GluCanS + Male_25$TGANorm)
+
+Terms:
+                Male_25$Pop Male_25$LD50_mean Male_25$LenF_mean Male_25$GluCanS
+resp 1            0.0012800         0.0062954         0.0117672       0.0147347
+resp 2            0.0214512         0.0018154         0.0032458       0.0138614
+resp 3            0.0168200         0.0007099         0.0024038       0.0004266
+resp 4            0.0004900         0.0834120         0.0054908       0.0007788
+resp 5            0.0745420         0.0059371         0.0039420       0.0191096
+resp 6            0.1503378         0.0023226         0.0192578       0.0002050
+resp 7            0.0560740         0.1257754         0.0142412       0.0006934
+resp 8            0.1854738         0.3560330         0.2661451       0.0026460
+Deg. of Freedom           1                 1                 1               1
+                Male_25$TGANorm Residuals
+resp 1                0.0021854 0.1279553
+resp 2                0.0151236 0.1010035
+resp 3                0.0016769 0.0714046
+resp 4                0.0031092 0.2580696
+resp 5                0.0000741 0.5610097
+resp 6                0.0027044 1.6537371
+resp 7                0.0918293 1.2143793
+resp 8                0.0217748 1.3670825
+Deg. of Freedom               1        14
+
+Residual standard errors: 0.09560158 0.08493843 0.07141659 0.1357702 0.2001802 0.3436918 0.2945189 0.312488
+Estimated effects may be unbalanced
+ Response 1 :
+                  Df   Sum Sq   Mean Sq F value Pr(>F)
+Male_25$Pop        1 0.001280 0.0012800  0.1400 0.7138
+Male_25$LD50_mean  1 0.006295 0.0062954  0.6888 0.4205
+Male_25$LenF_mean  1 0.011767 0.0117672  1.2875 0.2756
+Male_25$GluCanS    1 0.014735 0.0147347  1.6122 0.2249
+Male_25$TGANorm    1 0.002185 0.0021854  0.2391 0.6324
+Residuals         14 0.127955 0.0091397               
+
+ Response 2 :
+                  Df   Sum Sq   Mean Sq F value Pr(>F)
+Male_25$Pop        1 0.021451 0.0214512  2.9733 0.1066
+Male_25$LD50_mean  1 0.001815 0.0018154  0.2516 0.6237
+Male_25$LenF_mean  1 0.003246 0.0032458  0.4499 0.5133
+Male_25$GluCanS    1 0.013861 0.0138614  1.9213 0.1874
+Male_25$TGANorm    1 0.015124 0.0151236  2.0963 0.1697
+Residuals         14 0.101004 0.0072145               
+
+ Response 3 :
+                  Df   Sum Sq   Mean Sq F value  Pr(>F)  
+Male_25$Pop        1 0.016820 0.0168200  3.2978 0.09084 .
+Male_25$LD50_mean  1 0.000710 0.0007099  0.1392 0.71468  
+Male_25$LenF_mean  1 0.002404 0.0024038  0.4713 0.50360  
+Male_25$GluCanS    1 0.000427 0.0004266  0.0836 0.77666  
+Male_25$TGANorm    1 0.001677 0.0016769  0.3288 0.57547  
+Residuals         14 0.071405 0.0051003                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+                  Df   Sum Sq  Mean Sq F value  Pr(>F)  
+Male_25$Pop        1 0.000490 0.000490  0.0266 0.87281  
+Male_25$LD50_mean  1 0.083412 0.083412  4.5250 0.05166 .
+Male_25$LenF_mean  1 0.005491 0.005491  0.2979 0.59381  
+Male_25$GluCanS    1 0.000779 0.000779  0.0423 0.84010  
+Male_25$TGANorm    1 0.003109 0.003109  0.1687 0.68751  
+Residuals         14 0.258070 0.018434                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+                  Df  Sum Sq  Mean Sq F value Pr(>F)
+Male_25$Pop        1 0.07454 0.074542  1.8602 0.1941
+Male_25$LD50_mean  1 0.00594 0.005937  0.1482 0.7061
+Male_25$LenF_mean  1 0.00394 0.003942  0.0984 0.7584
+Male_25$GluCanS    1 0.01911 0.019110  0.4769 0.5011
+Male_25$TGANorm    1 0.00007 0.000074  0.0018 0.9663
+Residuals         14 0.56101 0.040072               
+
+ Response 6 :
+                  Df  Sum Sq  Mean Sq F value Pr(>F)
+Male_25$Pop        1 0.15034 0.150338  1.2727 0.2782
+Male_25$LD50_mean  1 0.00232 0.002323  0.0197 0.8905
+Male_25$LenF_mean  1 0.01926 0.019258  0.1630 0.6925
+Male_25$GluCanS    1 0.00021 0.000205  0.0017 0.9674
+Male_25$TGANorm    1 0.00270 0.002704  0.0229 0.8819
+Residuals         14 1.65374 0.118124               
+
+ Response 7 :
+                  Df  Sum Sq  Mean Sq F value Pr(>F)
+Male_25$Pop        1 0.05607 0.056074  0.6465 0.4348
+Male_25$LD50_mean  1 0.12578 0.125775  1.4500 0.2485
+Male_25$LenF_mean  1 0.01424 0.014241  0.1642 0.6915
+Male_25$GluCanS    1 0.00069 0.000693  0.0080 0.9300
+Male_25$TGANorm    1 0.09183 0.091829  1.0587 0.3210
+Residuals         14 1.21438 0.086741               
+
+ Response 8 :
+                  Df  Sum Sq Mean Sq F value  Pr(>F)  
+Male_25$Pop        1 0.18547 0.18547  1.8994 0.18977  
+Male_25$LD50_mean  1 0.35603 0.35603  3.6461 0.07691 .
+Male_25$LenF_mean  1 0.26615 0.26615  2.7255 0.12100  
+Male_25$GluCanS    1 0.00265 0.00265  0.0271 0.87160  
+Male_25$TGANorm    1 0.02177 0.02177  0.2230 0.64405  
+Residuals         14 1.36708 0.09765                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+   manova(cbind(Female_21$Sleep_Day_percent, Female_21$Sleep_Night_percent, 
+    Female_21$Starve_Day_percent, Female_21$Starve_Night_percent, 
+    Female_21$Move_Sleep_Day, Female_21$Move_Sleep_Night, Female_21$Move_Starve_Day, 
+    Female_21$Move_Starve_Night) ~ Female_21$Pop + Female_21$LD50_mean + 
+    Female_21$LenF_mean + Female_21$GluCanS + Female_21$TGANorm)
+
+Terms:
+                Female_21$Pop Female_21$LD50_mean Female_21$LenF_mean
+resp 1              0.0025313           0.0596140           0.0001930
+resp 2              0.0539761           0.0108224           0.0385412
+resp 3              0.0041472           0.0072949           0.0011516
+resp 4              0.1209013           0.0872846           0.0183589
+resp 5              0.0069192           0.0032555           0.0096981
+resp 6              0.1080450           0.0010134           0.0125788
+resp 7              0.0397832           0.0086006           0.0453117
+resp 8              0.0040898           0.2752330           0.1113909
+Deg. of Freedom             1                   1                   1
+                Female_21$GluCanS Female_21$TGANorm Residuals
+resp 1                  0.0432357         0.0005101 0.0525509
+resp 2                  0.0000443         0.0198844 0.1408106
+resp 3                  0.0010072         0.0198003 0.0587611
+resp 4                  0.0112753         0.0014229 0.5000140
+resp 5                  0.0187603         0.0005732 0.1652386
+resp 6                  0.0277937         0.0404224 0.8926679
+resp 7                  0.0080576         0.0035765 0.4258202
+resp 8                  0.1709175         0.0028732 1.1164126
+Deg. of Freedom                 1                 1        14
+
+Residual standard errors: 0.06126691 0.1002891 0.06478596 0.1889849 0.1086405 0.2525114 0.1744011 0.2823894
+Estimated effects may be unbalanced
+ Response 1 :
+                    Df   Sum Sq  Mean Sq F value   Pr(>F)   
+Female_21$Pop        1 0.002531 0.002531  0.6743 0.425304   
+Female_21$LD50_mean  1 0.059614 0.059614 15.8817 0.001355 **
+Female_21$LenF_mean  1 0.000193 0.000193  0.0514 0.823905   
+Female_21$GluCanS    1 0.043236 0.043236 11.5184 0.004366 **
+Female_21$TGANorm    1 0.000510 0.000510  0.1359 0.717922   
+Residuals           14 0.052551 0.003754                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+                    Df   Sum Sq  Mean Sq F value  Pr(>F)  
+Female_21$Pop        1 0.053976 0.053976  5.3665 0.03619 *
+Female_21$LD50_mean  1 0.010822 0.010822  1.0760 0.31718  
+Female_21$LenF_mean  1 0.038541 0.038541  3.8319 0.07052 .
+Female_21$GluCanS    1 0.000044 0.000044  0.0044 0.94802  
+Female_21$TGANorm    1 0.019884 0.019884  1.9770 0.18151  
+Residuals           14 0.140811 0.010058                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+                    Df   Sum Sq   Mean Sq F value  Pr(>F)  
+Female_21$Pop        1 0.004147 0.0041472  0.9881 0.33708  
+Female_21$LD50_mean  1 0.007295 0.0072949  1.7380 0.20855  
+Female_21$LenF_mean  1 0.001152 0.0011516  0.2744 0.60861  
+Female_21$GluCanS    1 0.001007 0.0010072  0.2400 0.63182  
+Female_21$TGANorm    1 0.019800 0.0198003  4.7175 0.04753 *
+Residuals           14 0.058761 0.0041972                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+                    Df  Sum Sq  Mean Sq F value  Pr(>F)  
+Female_21$Pop        1 0.12090 0.120901  3.3851 0.08708 .
+Female_21$LD50_mean  1 0.08728 0.087285  2.4439 0.14030  
+Female_21$LenF_mean  1 0.01836 0.018359  0.5140 0.48519  
+Female_21$GluCanS    1 0.01128 0.011275  0.3157 0.58309  
+Female_21$TGANorm    1 0.00142 0.001423  0.0398 0.84467  
+Residuals           14 0.50001 0.035715                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+                    Df   Sum Sq   Mean Sq F value Pr(>F)
+Female_21$Pop        1 0.006919 0.0069192  0.5862 0.4566
+Female_21$LD50_mean  1 0.003256 0.0032555  0.2758 0.6077
+Female_21$LenF_mean  1 0.009698 0.0096981  0.8217 0.3800
+Female_21$GluCanS    1 0.018760 0.0187603  1.5895 0.2280
+Female_21$TGANorm    1 0.000573 0.0005732  0.0486 0.8288
+Residuals           14 0.165239 0.0118028               
+
+ Response 6 :
+                    Df  Sum Sq  Mean Sq F value Pr(>F)
+Female_21$Pop        1 0.10804 0.108045  1.6945 0.2140
+Female_21$LD50_mean  1 0.00101 0.001013  0.0159 0.9015
+Female_21$LenF_mean  1 0.01258 0.012579  0.1973 0.6637
+Female_21$GluCanS    1 0.02779 0.027794  0.4359 0.5198
+Female_21$TGANorm    1 0.04042 0.040422  0.6340 0.4392
+Residuals           14 0.89267 0.063762               
+
+ Response 7 :
+                    Df  Sum Sq  Mean Sq F value Pr(>F)
+Female_21$Pop        1 0.03978 0.039783  1.3080 0.2719
+Female_21$LD50_mean  1 0.00860 0.008601  0.2828 0.6032
+Female_21$LenF_mean  1 0.04531 0.045312  1.4897 0.2424
+Female_21$GluCanS    1 0.00806 0.008058  0.2649 0.6148
+Female_21$TGANorm    1 0.00358 0.003577  0.1176 0.7368
+Residuals           14 0.42582 0.030416               
+
+ Response 8 :
+                    Df  Sum Sq  Mean Sq F value  Pr(>F)  
+Female_21$Pop        1 0.00409 0.004090  0.0513 0.82411  
+Female_21$LD50_mean  1 0.27523 0.275233  3.4515 0.08435 .
+Female_21$LenF_mean  1 0.11139 0.111391  1.3969 0.25694  
+Female_21$GluCanS    1 0.17092 0.170917  2.1433 0.16528  
+Female_21$TGANorm    1 0.00287 0.002873  0.0360 0.85218  
+Residuals           14 1.11641 0.079744                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+   manova(cbind(Female_25$Sleep_Day_percent, Female_25$Sleep_Night_percent, 
+    Female_25$Starve_Day_percent, Female_25$Starve_Night_percent, 
+    Female_25$Move_Sleep_Day, Female_25$Move_Sleep_Night, Female_25$Move_Starve_Day, 
+    Female_25$Move_Starve_Night) ~ Female_25$Pop + Female_25$LD50_mean + 
+    Female_25$LenF_mean + Female_25$GluCanS + Female_25$TGANorm)
+
+Terms:
+                Female_25$Pop Female_25$LD50_mean Female_25$LenF_mean
+resp 1              0.0002343           0.0474824           0.0008267
+resp 2              0.0210807           0.0134566           0.0001147
+resp 3              0.0054722           0.0110432           0.0016605
+resp 4              0.0065746           0.0956521           0.0003658
+resp 5              0.0127319           0.0235741           0.0004672
+resp 6              0.0008977           0.0007526           0.0194016
+resp 7              0.0140409           0.0087117           0.0161698
+resp 8              0.0001264           0.1107787           0.0228175
+Deg. of Freedom             1                   1                   1
+                Female_25$GluCanS Female_25$TGANorm Residuals
+resp 1                  0.0003200         0.0024080 0.0993270
+resp 2                  0.0040821         0.0040292 0.1177807
+resp 3                  0.0076391         0.0144055 0.1203174
+resp 4                  0.0329079         0.0030393 0.2840592
+resp 5                  0.0190936         0.0000055 0.3587582
+resp 6                  0.0613892         0.0060691 0.9486864
+resp 7                  0.0076925         0.0324718 0.3969165
+resp 8                  0.0824211         0.0313767 0.8235444
+Deg. of Freedom                 1                 1        13
+
+Residual standard errors: 0.08741015 0.09518432 0.09620388 0.1478199 0.1661228 0.2701405 0.1747342 0.2516934
+Estimated effects may be unbalanced
+1 observation deleted due to missingness
+ Response 1 :
+                    Df   Sum Sq  Mean Sq F value  Pr(>F)  
+Female_25$Pop        1 0.000234 0.000234  0.0307 0.86368  
+Female_25$LD50_mean  1 0.047482 0.047482  6.2145 0.02695 *
+Female_25$LenF_mean  1 0.000827 0.000827  0.1082 0.74744  
+Female_25$GluCanS    1 0.000320 0.000320  0.0419 0.84102  
+Female_25$TGANorm    1 0.002408 0.002408  0.3152 0.58408  
+Residuals           13 0.099327 0.007641                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+                    Df   Sum Sq   Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.021081 0.0210807  2.3268 0.1511
+Female_25$LD50_mean  1 0.013457 0.0134566  1.4853 0.2446
+Female_25$LenF_mean  1 0.000115 0.0001147  0.0127 0.9121
+Female_25$GluCanS    1 0.004082 0.0040821  0.4506 0.5138
+Female_25$TGANorm    1 0.004029 0.0040292  0.4447 0.5165
+Residuals           13 0.117781 0.0090601               
+
+ Response 3 :
+                    Df   Sum Sq   Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.005472 0.0054722  0.5913 0.4557
+Female_25$LD50_mean  1 0.011043 0.0110432  1.1932 0.2945
+Female_25$LenF_mean  1 0.001660 0.0016605  0.1794 0.6788
+Female_25$GluCanS    1 0.007639 0.0076391  0.8254 0.3801
+Female_25$TGANorm    1 0.014405 0.0144055  1.5565 0.2342
+Residuals           13 0.120317 0.0092552               
+
+ Response 4 :
+                    Df   Sum Sq  Mean Sq F value Pr(>F)  
+Female_25$Pop        1 0.006575 0.006575  0.3009 0.5926  
+Female_25$LD50_mean  1 0.095652 0.095652  4.3775 0.0566 .
+Female_25$LenF_mean  1 0.000366 0.000366  0.0167 0.8990  
+Female_25$GluCanS    1 0.032908 0.032908  1.5060 0.2415  
+Female_25$TGANorm    1 0.003039 0.003039  0.1391 0.7152  
+Residuals           13 0.284059 0.021851                 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+                    Df  Sum Sq   Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.01273 0.0127319  0.4614 0.5089
+Female_25$LD50_mean  1 0.02357 0.0235741  0.8542 0.3722
+Female_25$LenF_mean  1 0.00047 0.0004672  0.0169 0.8985
+Female_25$GluCanS    1 0.01909 0.0190936  0.6919 0.4205
+Female_25$TGANorm    1 0.00001 0.0000055  0.0002 0.9889
+Residuals           13 0.35876 0.0275968               
+
+ Response 6 :
+                    Df  Sum Sq  Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.00090 0.000898  0.0123 0.9134
+Female_25$LD50_mean  1 0.00075 0.000753  0.0103 0.9207
+Female_25$LenF_mean  1 0.01940 0.019402  0.2659 0.6148
+Female_25$GluCanS    1 0.06139 0.061389  0.8412 0.3757
+Female_25$TGANorm    1 0.00607 0.006069  0.0832 0.7776
+Residuals           13 0.94869 0.072976               
+
+ Response 7 :
+                    Df  Sum Sq  Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.01404 0.014041  0.4599 0.5096
+Female_25$LD50_mean  1 0.00871 0.008712  0.2853 0.6022
+Female_25$LenF_mean  1 0.01617 0.016170  0.5296 0.4797
+Female_25$GluCanS    1 0.00769 0.007692  0.2519 0.6241
+Female_25$TGANorm    1 0.03247 0.032472  1.0635 0.3212
+Residuals           13 0.39692 0.030532               
+
+ Response 8 :
+                    Df  Sum Sq  Mean Sq F value Pr(>F)
+Female_25$Pop        1 0.00013 0.000126  0.0020 0.9650
+Female_25$LD50_mean  1 0.11078 0.110779  1.7487 0.2088
+Female_25$LenF_mean  1 0.02282 0.022818  0.3602 0.5587
+Female_25$GluCanS    1 0.08242 0.082421  1.3011 0.2746
+Female_25$TGANorm    1 0.03138 0.031377  0.4953 0.4940
+Residuals           13 0.82354 0.063350               
+
+1 observation deleted due to missingness
+[1] 86.0834
+[1] 54.9334
+[1] 75.9167
+[1] 51.3722
+[1] 118
+[1] 90.3595
+[1] 98.9665
+[1] 76.2751
+
+	Welch Two Sample t-test
+
+data:  Male_21$Sleep_ALL_percent and Male_25$Sleep_ALL_percent
+t = 3.446, df = 38, p-value = 0.001404
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.0356838 0.1373162
+sample estimates:
+mean of x mean of y 
+   0.6506    0.5641 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Sleep_ALL_percent and Female_25$Sleep_ALL_percent
+t = 2.7694, df = 37.896, p-value = 0.008646
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.01818133 0.11701867
+sample estimates:
+mean of x mean of y 
+   0.5696    0.5020 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Sleep_ALL_percent and Male_21$Sleep_ALL_percent
+t = -3.2316, df = 38, p-value = 0.002544
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.13174134 -0.03025866
+sample estimates:
+mean of x mean of y 
+   0.5696    0.6506 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Sleep_ALL_percent and Male_25$Sleep_ALL_percent
+t = -2.5402, df = 37.884, p-value = 0.0153
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.11159606 -0.01260394
+sample estimates:
+mean of x mean of y 
+   0.5020    0.5641 
+
+
+	Welch Two Sample t-test
+
+data:  Male_21$Starve_ALL_percent and Male_25$Starve_ALL_percent
+t = 3.2913, df = 37.985, p-value = 0.00216
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.04018483 0.16861517
+sample estimates:
+mean of x mean of y 
+   0.4914    0.3870 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Starve_ALL_percent and Female_25$Starve_ALL_percent
+t = 2.0963, df = 37.769, p-value = 0.04281
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.00245594 0.14164406
+sample estimates:
+mean of x mean of y 
+  0.46875   0.39670 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_Male_21$Sleep_Night_percent and PC_Male_21$Sleep_Night_percent
+t = -2.5361, df = 17.729, p-value = 0.02085
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.20067523 -0.01872477
+sample estimates:
+mean of x mean of y 
+   0.7770    0.8867 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_Male_25$Sleep_Night_percent and PC_Male_25$Sleep_Night_percent
+t = -1.6909, df = 17.985, p-value = 0.1081
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.14688819  0.01588819
+sample estimates:
+mean of x mean of y 
+   0.6663    0.7318 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_Female_21$Sleep_Night_percent and PC_Female_21$Sleep_Night_percent
+t = -2.1504, df = 14.615, p-value = 0.0487
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.2071210713 -0.0006789287
+sample estimates:
+mean of x mean of y 
+   0.7816    0.8855 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_Female_25$Sleep_Night_percent and PC_Female_25$Sleep_Night_percent
+t = -1.6497, df = 14.779, p-value = 0.1201
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.14909292  0.01909292
+sample estimates:
+mean of x mean of y 
+   0.6944    0.7594 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Starve_ALL_percent and Male_21$Starve_ALL_percent
+t = -0.66792, df = 37.564, p-value = 0.5083
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.09132549  0.04602549
+sample estimates:
+mean of x mean of y 
+  0.46875   0.49140 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Starve_ALL_percent and Male_25$Starve_ALL_percent
+t = 0.30114, df = 37.907, p-value = 0.765
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05551365  0.07491365
+sample estimates:
+mean of x mean of y 
+   0.3967    0.3870 
+
+
+	Welch Two Sample t-test
+
+data:  Male_21$Sleep_ALL_percent and Male_21$Starve_ALL_percent
+t = 5.5333, df = 35.937, p-value = 2.939e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1008455 0.2175545
+sample estimates:
+mean of x mean of y 
+   0.6506    0.4914 
+
+
+	Welch Two Sample t-test
+
+data:  Male_25$Sleep_ALL_percent and Male_25$Starve_ALL_percent
+t = 6.2285, df = 36.248, p-value = 3.35e-07
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1194468 0.2347532
+sample estimates:
+mean of x mean of y 
+   0.5641    0.3870 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Sleep_ALL_percent and Female_21$Starve_ALL_percent
+t = 3.2713, df = 34.057, p-value = 0.002456
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.03820197 0.16349803
+sample estimates:
+mean of x mean of y 
+  0.56960   0.46875 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Sleep_ALL_percent and Female_25$Starve_ALL_percent
+t = 3.6622, df = 34.528, p-value = 0.0008301
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.04689933 0.16370067
+sample estimates:
+mean of x mean of y 
+   0.5020    0.3967 
+
+
+	Welch Two Sample t-test
+
+data:  Male_21$Move_Sleep_ALL and Male_25$Move_Sleep_ALL
+t = -0.32392, df = 36.514, p-value = 0.7478
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.1437082  0.1041082
+sample estimates:
+mean of x mean of y 
+  1.51795   1.53775 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Move_Sleep_ALL and Female_25$Move_Sleep_ALL
+t = -0.14712, df = 37.928, p-value = 0.8838
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.09890064  0.08550064
+sample estimates:
+mean of x mean of y 
+   1.1546    1.1613 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Move_Sleep_ALL and Male_21$Move_Sleep_ALL
+t = -7.1624, df = 37.063, p-value = 1.708e-08
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.4661334 -0.2605666
+sample estimates:
+mean of x mean of y 
+  1.15460   1.51795 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Move_Sleep_ALL and Male_25$Move_Sleep_ALL
+t = -6.6168, df = 33.047, p-value = 1.579e-07
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.4921944 -0.2607056
+sample estimates:
+mean of x mean of y 
+  1.16130   1.53775 
+
+
+	Welch Two Sample t-test
+
+data:  Male_21$Move_Starve_ALL and Male_25$Move_Starve_ALL
+t = -2.55, df = 33.52, p-value = 0.01552
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.33772927 -0.03807073
+sample estimates:
+mean of x mean of y 
+  1.57275   1.76065 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Move_Starve_ALL and Female_25$Move_Starve_ALL
+t = -1.5419, df = 33.006, p-value = 0.1326
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.21930325  0.03020325
+sample estimates:
+mean of x mean of y 
+  1.23555   1.33010 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Move_Starve_ALL and Male_21$Move_Starve_ALL
+t = -5.1222, df = 36.466, p-value = 1.001e-05
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.4706515 -0.2037485
+sample estimates:
+mean of x mean of y 
+  1.23555   1.57275 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Move_Starve_ALL and Male_25$Move_Starve_ALL
+t = -6.1784, df = 29.742, p-value = 8.788e-07
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5729192 -0.2881808
+sample estimates:
+mean of x mean of y 
+  1.33010   1.76065 
+
+
+	Welch Two Sample t-test
+
+data:  Male_21$Move_Sleep_ALL and Male_21$Move_Starve_ALL
+t = -0.96667, df = 37.805, p-value = 0.3399
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.1695816  0.0599816
+sample estimates:
+mean of x mean of y 
+  1.51795   1.57275 
+
+
+	Welch Two Sample t-test
+
+data:  Male_25$Move_Sleep_ALL and Male_25$Move_Starve_ALL
+t = -2.8891, df = 35.837, p-value = 0.006517
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.37939633 -0.06640367
+sample estimates:
+mean of x mean of y 
+  1.53775   1.76065 
+
+
+	Welch Two Sample t-test
+
+data:  Female_21$Move_Sleep_ALL and Female_21$Move_Starve_ALL
+t = -1.332, df = 32.44, p-value = 0.1922
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.20467745  0.04277745
+sample estimates:
+mean of x mean of y 
+  1.15460   1.23555 
+
+
+	Welch Two Sample t-test
+
+data:  Female_25$Move_Sleep_ALL and Female_25$Move_Starve_ALL
+t = -3.6485, df = 37.797, p-value = 0.0007928
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.26247723 -0.07512277
+sample estimates:
+mean of x mean of y 
+   1.1613    1.3301 
+
+
+Call:
+lm(formula = x$LD50_mean ~ x$Pop + x$Sex + x$Temp + x$Sleep_ALL_percent + 
+    x$Starve_ALL_percent + x$Move_Sleep_ALL + x$Move_Starve_ALL + 
+    x$PerChange + x$GluCanS + x$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-24.505  -6.282  -1.285   8.095  28.993 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)          167.16814   31.71255   5.271 1.47e-06 ***
+x$PopPC              -12.27578    3.15003  -3.897 0.000223 ***
+x$SexM               -34.03402    4.76675  -7.140 7.42e-10 ***
+x$Temp                -5.64577    0.97892  -5.767 2.08e-07 ***
+x$Sleep_ALL_percent   51.39025   33.30535   1.543 0.127404    
+x$Starve_ALL_percent  30.57687   37.59580   0.813 0.418841    
+x$Move_Sleep_ALL     -11.80406   11.51656  -1.025 0.308960    
+x$Move_Starve_ALL     18.23455    8.94530   2.038 0.045339 *  
+x$PerChange            0.06429    0.27530   0.234 0.816047    
+x$GluCanS              0.64138    3.14492   0.204 0.839000    
+x$TGANorm             63.73473   32.50820   1.961 0.053967 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.86 on 69 degrees of freedom
+Multiple R-squared:  0.7964,	Adjusted R-squared:  0.7669 
+F-statistic: 26.99 on 10 and 69 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: x$LD50_mean
+                     Df  Sum Sq Mean Sq  F value    Pr(>F)    
+x$Pop                 1  2743.2  2743.2  19.4974 3.640e-05 ***
+x$Sex                 1 16616.3 16616.3 118.1025 < 2.2e-16 ***
+x$Temp                1 14052.0 14052.0  99.8764 4.787e-15 ***
+x$Sleep_ALL_percent   1  2273.9  2273.9  16.1618 0.0001464 ***
+x$Starve_ALL_percent  1  1177.7  1177.7   8.3707 0.0050986 ** 
+x$Move_Sleep_ALL      1    16.2    16.2   0.1150 0.7355729    
+x$Move_Starve_ALL     1   489.9   489.9   3.4821 0.0662860 .  
+x$PerChange           1     3.5     3.5   0.0246 0.8757711    
+x$GluCanS             1    66.6    66.6   0.4737 0.4936076    
+x$TGANorm             1   540.8   540.8   3.8438 0.0539671 .  
+Residuals            69  9707.9   140.7                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = Male$LD50_mean ~ Male$Pop + Male$Temp + Male$Sleep_ALL_percent + 
+    Male$Starve_ALL_percent + Male$Move_Sleep_ALL + Male$Move_Starve_ALL + 
+    Male$PerChange + Male$GluCanS + Male$TGANorm)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-15.5942  -5.1243   0.9323   5.0174   9.9784 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             204.25749   28.60455   7.141 6.07e-08 ***
+Male$PopPC               -6.43126    3.09088  -2.081   0.0461 *  
+Male$Temp                -6.79398    0.93191  -7.290 4.06e-08 ***
+Male$Sleep_ALL_percent   -7.59558   24.95978  -0.304   0.7630    
+Male$Starve_ALL_percent  50.05332   30.13113   1.661   0.1071    
+Male$Move_Sleep_ALL     -13.67620    9.05883  -1.510   0.1416    
+Male$Move_Starve_ALL     13.25304    7.05467   1.879   0.0700 .  
+Male$PerChange           -0.03741    0.23287  -0.161   0.8735    
+Male$GluCanS             -2.62143    2.76530  -0.948   0.3507    
+Male$TGANorm             31.49333   29.47667   1.068   0.2939    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 7.579 on 30 degrees of freedom
+Multiple R-squared:  0.8447,	Adjusted R-squared:  0.7981 
+F-statistic: 18.13 on 9 and 30 DF,  p-value: 7.766e-10
+
+Analysis of Variance Table
+
+Response: Male$LD50_mean
+                        Df Sum Sq Mean Sq  F value    Pr(>F)    
+Male$Pop                 1  471.1   471.1   8.2028  0.007564 ** 
+Male$Temp                1 7754.7  7754.7 135.0136 1.243e-12 ***
+Male$Sleep_ALL_percent   1  123.7   123.7   2.1536  0.152643    
+Male$Starve_ALL_percent  1  662.2   662.2  11.5294  0.001947 ** 
+Male$Move_Sleep_ALL      1   22.9    22.9   0.3986  0.532610    
+Male$Move_Starve_ALL     1  228.2   228.2   3.9729  0.055400 .  
+Male$PerChange           1    6.3     6.3   0.1096  0.742861    
+Male$GluCanS             1   36.0    36.0   0.6259  0.435058    
+Male$TGANorm             1   65.6    65.6   1.1415  0.293855    
+Residuals               30 1723.1    57.4                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = Female$LD50_mean ~ Female$Pop + Female$Temp + Female$Sleep_ALL_percent + 
+    Female$Starve_ALL_percent + Female$Move_Sleep_ALL + Female$Move_Starve_ALL + 
+    Female$PerChange + Female$GluCanS + Female$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-28.223  -6.852   0.666   9.300  22.614 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                90.1556    61.2435   1.472  0.15141   
+Female$PopPC              -15.1219     4.9898  -3.031  0.00499 **
+Female$Temp                -4.6975     1.7971  -2.614  0.01386 * 
+Female$Sleep_ALL_percent  196.4012    82.9576   2.367  0.02456 * 
+Female$Starve_ALL_percent -81.5484    88.2744  -0.924  0.36296   
+Female$Move_Sleep_ALL      -5.9505    27.3231  -0.218  0.82907   
+Female$Move_Starve_ALL     35.4425    21.1250   1.678  0.10379   
+Female$PerChange            0.7722     0.6034   1.280  0.21042   
+Female$GluCanS              1.5987     6.2113   0.257  0.79864   
+Female$TGANorm            106.5923    54.8781   1.942  0.06153 . 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 13.68 on 30 degrees of freedom
+Multiple R-squared:  0.7191,	Adjusted R-squared:  0.6349 
+F-statistic: 8.535 on 9 and 30 DF,  p-value: 3.345e-06
+
+Analysis of Variance Table
+
+Response: Female$LD50_mean
+                          Df Sum Sq Mean Sq F value    Pr(>F)    
+Female$Pop                 1 2742.0  2742.0 14.6606 0.0006097 ***
+Female$Temp                1 6333.3  6333.3 33.8621 2.314e-06 ***
+Female$Sleep_ALL_percent   1 2983.2  2983.2 15.9504 0.0003884 ***
+Female$Starve_ALL_percent  1  394.2   394.2  2.1077 0.1569357    
+Female$Move_Sleep_ALL      1  395.4   395.4  2.1139 0.1563498    
+Female$Move_Starve_ALL     1  281.6   281.6  1.5059 0.2293107    
+Female$PerChange           1  440.9   440.9  2.3576 0.1351576    
+Female$GluCanS             1   90.8    90.8  0.4853 0.4913750    
+Female$TGANorm             1  705.6   705.6  3.7727 0.0615349 .  
+Residuals                 30 5610.9   187.0                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = Male$LD50_mean ~ Male$Pop + Male$Temp + Male$Sleep_Day_percent + 
+    Male$Sleep_Night_percent + Male$Starve_Day_percent + Male$Starve_Night_percent + 
+    Male$Move_Sleep_Day + Male$Move_Sleep_Night + Male$Move_Starve_Day + 
+    Male$Move_Starve_Night + Male$PerChange + Male$GluCanS + 
+    Male$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-12.466  -3.226   0.349   4.058   9.877 
+
+Coefficients:
+                          Estimate Std. Error t value Pr(>|t|)    
+(Intercept)               212.2691    35.2788   6.017 2.36e-06 ***
+Male$PopPC                 -3.4195     3.0857  -1.108  0.27794    
+Male$Temp                  -6.0957     1.7121  -3.560  0.00145 ** 
+Male$Sleep_Day_percent     48.0174    25.9465   1.851  0.07562 .  
+Male$Sleep_Night_percent  -61.4261    28.4391  -2.160  0.04018 *  
+Male$Starve_Day_percent    -6.7285    27.6984  -0.243  0.80997    
+Male$Starve_Night_percent  55.3814    25.9670   2.133  0.04255 *  
+Male$Move_Sleep_Day       -13.4075    11.5873  -1.157  0.25776    
+Male$Move_Sleep_Night      -4.4263     5.8458  -0.757  0.45575    
+Male$Move_Starve_Day        7.8153     8.2754   0.944  0.35366    
+Male$Move_Starve_Night      2.0978     6.8342   0.307  0.76132    
+Male$PerChange             -0.1666     0.2581  -0.645  0.52429    
+Male$GluCanS               -2.4641     2.6435  -0.932  0.35984    
+Male$TGANorm               12.1668    32.2586   0.377  0.70911    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 6.967 on 26 degrees of freedom
+Multiple R-squared:  0.8862,	Adjusted R-squared:  0.8294 
+F-statistic: 15.58 on 13 and 26 DF,  p-value: 4.474e-09
+
+Analysis of Variance Table
+
+Response: Male$LD50_mean
+                          Df Sum Sq Mean Sq  F value    Pr(>F)    
+Male$Pop                   1  471.1   471.1   9.7068 0.0044376 ** 
+Male$Temp                  1 7754.7  7754.7 159.7692 1.314e-12 ***
+Male$Sleep_Day_percent     1  212.7   212.7   4.3819 0.0462239 *  
+Male$Sleep_Night_percent   1   21.4    21.4   0.4404 0.5127822    
+Male$Starve_Day_percent    1   98.4    98.4   2.0275 0.1663654    
+Male$Starve_Night_percent  1  994.5   994.5  20.4893 0.0001173 ***
+Male$Move_Sleep_Day        1  110.7   110.7   2.2818 0.1429619    
+Male$Move_Sleep_Night      1   19.3    19.3   0.3970 0.5341662    
+Male$Move_Starve_Day       1   76.0    76.0   1.5653 0.2220285    
+Male$Move_Starve_Night     1    6.2     6.2   0.1284 0.7230343    
+Male$PerChange             1   21.3    21.3   0.4379 0.5139520    
+Male$GluCanS               1   38.6    38.6   0.7952 0.3807137    
+Male$TGANorm               1    6.9     6.9   0.1423 0.7091117    
+Residuals                 26 1262.0    48.5                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Call:
+lm(formula = Female$LD50_mean ~ Female$Pop + Female$Temp + Female$Sleep_Day_percent + 
+    Female$Sleep_Night_percent + Female$Starve_Day_percent + 
+    Female$Starve_Night_percent + Female$Move_Sleep_Day + Female$Move_Sleep_Night + 
+    Female$Move_Starve_Day + Female$Move_Starve_Night + Female$PerChange + 
+    Female$GluCanS + Female$TGANorm)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-28.986  -6.591   1.908   7.050  14.327 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                 171.9505    55.7161   3.086 0.004769 ** 
+Female$PopPC                 -5.2631     5.2859  -0.996 0.328579    
+Female$Temp                  -4.5776     1.9036  -2.405 0.023604 *  
+Female$Sleep_Day_percent    171.7833    40.1426   4.279 0.000225 ***
+Female$Sleep_Night_percent  -24.1146    59.7704  -0.403 0.689913    
+Female$Starve_Day_percent   -70.0318    45.1351  -1.552 0.132845    
+Female$Starve_Night_percent  21.8384    54.7815   0.399 0.693409    
+Female$Move_Sleep_Day        49.6890    25.8623   1.921 0.065722 .  
+Female$Move_Sleep_Night     -40.4358    14.1616  -2.855 0.008337 ** 
+Female$Move_Starve_Day       44.8781    23.3093   1.925 0.065193 .  
+Female$Move_Starve_Night    -13.9438    18.1079  -0.770 0.448216    
+Female$PerChange              0.4860     0.5039   0.965 0.343660    
+Female$GluCanS                7.0970     5.0224   1.413 0.169495    
+Female$TGANorm                6.7875    50.7444   0.134 0.894623    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 11.38 on 26 degrees of freedom
+Multiple R-squared:  0.8316,	Adjusted R-squared:  0.7473 
+F-statistic: 9.874 on 13 and 26 DF,  p-value: 5.344e-07
+
+Analysis of Variance Table
+
+Response: Female$LD50_mean
+                            Df Sum Sq Mean Sq F value    Pr(>F)    
+Female$Pop                   1 2742.0  2742.0 21.1856 9.592e-05 ***
+Female$Temp                  1 6333.3  6333.3 48.9330 1.990e-07 ***
+Female$Sleep_Day_percent     1 3664.6  3664.6 28.3143 1.443e-05 ***
+Female$Sleep_Night_percent   1   72.7    72.7  0.5615  0.460400    
+Female$Starve_Day_percent    1    0.4     0.4  0.0029  0.957394    
+Female$Starve_Night_percent  1 1478.4  1478.4 11.4229  0.002299 ** 
+Female$Move_Sleep_Day        1   68.6    68.6  0.5297  0.473221    
+Female$Move_Sleep_Night      1 1226.9  1226.9  9.4796  0.004856 ** 
+Female$Move_Starve_Day       1  425.9   425.9  3.2906  0.081237 .  
+Female$Move_Starve_Night     1  134.2   134.2  1.0369  0.317921    
+Female$PerChange             1  174.2   174.2  1.3456  0.256590    
+Female$GluCanS               1  289.4   289.4  2.2361  0.146864    
+Female$TGANorm               1    2.3     2.3  0.0179  0.894623    
+Residuals                   26 3365.1   129.4                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
