@@ -1,0 +1,104 @@
+
+	Shapiro-Wilk normality test
+
+data:  FFD_M$GluNorm
+W = 0.93738, p-value = 8.325e-07
+
+
+	Shapiro-Wilk normality test
+
+data:  FFD_F$GluNorm
+W = 0.95037, p-value = 9.674e-06
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_M$GluNorm
+W = 0.85352, p-value = 5.857e-12
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_F$GluNorm
+W = 0.97626, p-value = 0.00389
+
+
+	Shapiro-Wilk normality test
+
+data:  FFD_M$Glu.CanS
+W = 0.95157, p-value = 0.0004742
+
+
+	Shapiro-Wilk normality test
+
+data:  FFD_F$Glu.CanS
+W = 0.94453, p-value = 0.0001539
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_M$Glu.CanS
+W = 0.86199, p-value = 1.87e-08
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_F$Glu.CanS
+W = 0.97183, p-value = 0.0215
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$GluNorm and PC_M$GluNorm
+W = 11819, p-value = 0.0007282
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_F$GluNorm and PC_F$GluNorm
+W = 12730, p-value = 0.006455
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$GluNorm and FFD_F$GluNorm
+W = 12778, p-value = 0.0358
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  PC_M$GluNorm and PC_F$GluNorm
+W = 14605, p-value = 0.3118
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$Glu.CanS and PC_M$Glu.CanS
+W = 4086, p-value = 0.0001043
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_F$Glu.CanS and PC_F$Glu.CanS
+W = 4177, p-value = 7.399e-05
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$Glu.CanS and FFD_F$Glu.CanS
+W = 6621, p-value = 0.4724
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  PC_M$Glu.CanS and PC_F$Glu.CanS
+W = 6104, p-value = 0.3351
+alternative hypothesis: true location shift is not equal to 0
+

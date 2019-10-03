@@ -1,0 +1,182 @@
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_F_21$GluCanS and Glu_FFD_F_25$GluCanS
+W = 17480, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_M_21$GluCanS and Glu_FFD_M_25$GluCanS
+W = 13899, p-value = 5.252e-08
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$GluCanS and Glu_PC_F_25$GluCanS
+W = 13777, p-value = 2.032e-10
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$GluCanS and Glu_PC_M_25$GluCanS
+W = 11970, p-value = 8.896e-06
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$GluCanS and Glu_FFD_M_21$GluCanS
+W = 19724, p-value = 1.467e-05
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$GluCanS and Glu_FFD_F_21$GluCanS
+W = 12381, p-value = 0.001137
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_25$GluCanS and Glu_FFD_M_25$GluCanS
+W = 7674, p-value = 0.0001043
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_25$GluCanS and Glu_FFD_F_25$GluCanS
+W = 7919, p-value = 7.399e-05
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_21$TGACanS and TGA_FFD_M_21$TGACanS
+W = 15008, p-value = 0.4007
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGACanS and TGA_FFD_F_21$TGACanS
+W = 11434, p-value = 0.01727
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_F_21$GluPro and Glu_FFD_F_25$GluPro
+W = 22398, p-value = 1.002e-14
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_M_21$GluPro and Glu_FFD_M_25$GluPro
+W = 15391, p-value = 0.9996
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$GluPro and Glu_PC_F_25$GluPro
+W = 18148, p-value = 0.009888
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$GluPro and Glu_PC_M_25$GluPro
+W = 15459, p-value = 0.7323
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$GluPro and Glu_FFD_M_21$GluPro
+W = 19289, p-value = 0.0001046
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$GluPro and Glu_FFD_F_21$GluPro
+W = 12479, p-value = 0.001623
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_25$GluPro and Glu_FFD_M_25$GluPro
+W = 18106, p-value = 0.0007282
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_25$GluPro and Glu_FFD_F_25$GluPro
+W = 17886, p-value = 0.006455
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_FFD_F_21$TGAPro and TGA_FFD_F_25$TGAPro
+W = 15057, p-value = 0.2826
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_FFD_M_21$TGAPro and TGA_FFD_M_25$TGAPro
+W = 12549, p-value = 5.471e-07
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGAPro and TGA_PC_F_25$TGAPro
+W = 14532, p-value = 0.07965
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_21$TGAPro and TGA_PC_M_25$TGAPro
+W = 15146, p-value = 0.06744
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_21$TGAPro and TGA_FFD_M_21$TGAPro
+W = 15482, p-value = 0.7249
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGAPro and TGA_FFD_F_21$TGAPro
+W = 11106, p-value = 0.005748
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_25$TGAPro and TGA_FFD_M_25$TGAPro
+W = 15264, p-value = 0.0004049
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_25$TGAPro and TGA_FFD_F_25$TGAPro
+W = 15953, p-value = 0.002039
+alternative hypothesis: true location shift is not equal to 0
+

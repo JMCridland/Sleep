@@ -1,0 +1,52 @@
+
+	Shapiro-Wilk normality test
+
+data:  FFD_M$TGA.Protein
+W = 0.95553, p-value = 4.472e-06
+
+
+	Shapiro-Wilk normality test
+
+data:  FFD_F$TGA.Protein
+W = 0.94795, p-value = 7.778e-07
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_M$TGA.Protein
+W = 0.97792, p-value = 0.004989
+
+
+	Shapiro-Wilk normality test
+
+data:  PC_F$TGA.Protein
+W = 0.91969, p-value = 1.346e-08
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$TGA.Protein and PC_M$TGA.Protein
+W = 23216, p-value = 0.0004049
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_F$TGA.Protein and PC_F$TGA.Protein
+W = 22943, p-value = 0.002039
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  FFD_M$TGA.Protein and FFD_F$TGA.Protein
+W = 21086, p-value = 0.6564
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  PC_M$TGA.Protein and PC_F$TGA.Protein
+W = 16278, p-value = 0.3258
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,262 @@
+
+Call:
+lm(formula = x$Glu.CanS ~ x$Glu.Plate)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-3.760 -0.415 -0.074  0.281 32.515 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             1.371009   0.208563   6.574 9.71e-11 ***
+x$Glu.Plate02222019-3   3.843727   0.466360   8.242 8.57e-16 ***
+x$Glu.Plate022222019-2  2.129305   0.625688   3.403 0.000705 ***
+x$Glu.Plate06052019-1  -0.091958   0.483021  -0.190 0.849067    
+x$Glu.Plate06222017-1   0.458311   0.286642   1.599 0.110302    
+x$Glu.Plate07112017-1  -0.010925   0.286642  -0.038 0.969609    
+x$Glu.Plate08152017-2   0.750306   0.286642   2.618 0.009050 ** 
+x$Glu.Plate08162017-1  -0.009193   0.286642  -0.032 0.974425    
+x$Glu.Plate08162017-2  -0.078649   0.286642  -0.274 0.783874    
+x$Glu.Plate10262017-1   0.689844   0.294952   2.339 0.019629 *  
+x$Glu.Plate10262017-2   0.796232   0.287912   2.766 0.005835 ** 
+x$Glu.Plate11082017-1   0.024257   0.294952   0.082 0.934478    
+x$Glu.Plate11082017-2   0.408161   0.286642   1.424 0.154917    
+x$Glu.Plate12242017-1   0.403015   0.299828   1.344 0.179341    
+x$Glu.Plate12242017-2   0.052855   0.399367   0.132 0.894748    
+x$Glu.Plate2222019      0.724935   0.301581   2.404 0.016490 *  
+x$Glu.Plate9202018      0.145589   0.294952   0.494 0.621744    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 1.445 on 688 degrees of freedom
+  (9 observations deleted due to missingness)
+Multiple R-squared:  0.1416,	Adjusted R-squared:  0.1216 
+F-statistic: 7.092 on 16 and 688 DF,  p-value: 2.483e-15
+
+
+Call:
+lm(formula = x$Glu.Pro ~ x$Glu.Plate)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.13763 -0.01292 -0.00238  0.00904  1.19003 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             0.0442836  0.0076032   5.824 8.80e-09 ***
+x$Glu.Plate02222019-3   0.1465758  0.0170012   8.622  < 2e-16 ***
+x$Glu.Plate022222019-2  0.0687766  0.0228095   3.015  0.00266 ** 
+x$Glu.Plate06052019-1   0.0040645  0.0176086   0.231  0.81752    
+x$Glu.Plate06222017-1   0.0416945  0.0104495   3.990 7.31e-05 ***
+x$Glu.Plate07112017-1  -0.0102815  0.0104495  -0.984  0.32550    
+x$Glu.Plate08152017-2   0.0110827  0.0104495   1.061  0.28925    
+x$Glu.Plate08162017-1   0.0169981  0.0104495   1.627  0.10426    
+x$Glu.Plate08162017-2  -0.0016357  0.0104495  -0.157  0.87566    
+x$Glu.Plate10262017-1   0.0134203  0.0107525   1.248  0.21242    
+x$Glu.Plate10262017-2   0.0137985  0.0104958   1.315  0.18906    
+x$Glu.Plate11082017-1  -0.0010303  0.0107525  -0.096  0.92369    
+x$Glu.Plate11082017-2   0.0179874  0.0104495   1.721  0.08564 .  
+x$Glu.Plate12242017-1   0.0115982  0.0109302   1.061  0.28901    
+x$Glu.Plate12242017-2   0.0069755  0.0145589   0.479  0.63200    
+x$Glu.Plate2222019      0.0232058  0.0109942   2.111  0.03515 *  
+x$Glu.Plate9202018     -0.0003022  0.0107525  -0.028  0.97758    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.05268 on 688 degrees of freedom
+  (9 observations deleted due to missingness)
+Multiple R-squared:  0.156,	Adjusted R-squared:  0.1363 
+F-statistic: 7.946 on 16 and 688 DF,  p-value: < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_FFD_F_21$Glu.CanS
+W = 0.96575, p-value = 0.0002551
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_FFD_M_21$Glu.CanS
+W = 0.81697, p-value = 9.259e-14
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_PC_F_21$Glu.CanS
+W = 0.96218, p-value = 0.000107
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_PC_M_21$Glu.CanS
+W = 0.16679, p-value < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_FFD_F_21$Glu.Pro
+W = 0.85988, p-value = 1.074e-11
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_FFD_M_21$Glu.Pro
+W = 0.828, p-value = 2.662e-13
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_PC_F_21$Glu.Pro
+W = 0.81848, p-value = 1.582e-13
+
+
+	Shapiro-Wilk normality test
+
+data:  Glu_PC_M_21$Glu.Pro
+W = 0.15628, p-value < 2.2e-16
+
+    Genotype   Pop      Sex         Sample         Glu.Plate     Glucose      
+ FFD10  :18   FFD:180   F:180   A3     : 10   06222017-1:30   Min.   :0.2620  
+ FFD14  :18   PC :  0   M:  0   B3     : 10   08152017-2:30   1st Qu.:0.5577  
+ FFD16  :18                     C3     : 10   10262017-2:30   Median :0.6715  
+ FFD19  :18                     D3     : 10   08162017-1:24   Mean   :0.7576  
+ FFD2   :18                     E3     : 10   10262017-1:24   3rd Qu.:0.8773  
+ FFD22  :18                     F3     : 10   12242017-1:24   Max.   :1.9960  
+ (Other):72                     (Other):120   (Other)   :18   NA's   :2       
+    Protein.Plate    Protein         Glu.Pro           Glu.CanS     
+ 08112017-2: 12   Min.   : 4.80   Min.   :0.02328   Min.   :0.6623  
+ 11292017-4: 12   1st Qu.:10.11   1st Qu.:0.04752   1st Qu.:1.3957  
+ 04162019-1:  6   Median :11.45   Median :0.05976   Median :1.9696  
+ 06082017-4:  6   Mean   :11.51   Mean   :0.06818   Mean   :2.0552  
+ 06112017-1:  6   3rd Qu.:12.88   3rd Qu.:0.08053   3rd Qu.:2.6456  
+ 06152017-1:  6   Max.   :18.66   Max.   :0.20367   Max.   :4.3335  
+ (Other)   :132   NA's   :2       NA's   :4         NA's   :4       
+    Genotype   Pop      Sex         Sample         Glu.Plate     Glucose      
+ FFD10  :18   FFD:180   F:  0   A3     : 10   07112017-1:30   Min.   :0.0520  
+ FFD14  :18   PC :  0   M:180   B3     : 10   11082017-2:30   1st Qu.:0.2877  
+ FFD16  :18                     C3     : 10   02222019-2:24   Median :0.3747  
+ FFD19  :18                     D3     : 10   08162017-2:24   Mean   :0.3849  
+ FFD2   :18                     E3     : 10   11082017-1:24   3rd Qu.:0.4529  
+ FFD22  :18                     F3     : 10   9202018   :24   Max.   :0.8660  
+ (Other):72                     (Other):120   (Other)   :24                   
+    Protein.Plate    Protein          Glu.Pro           Glu.CanS     
+ 04162019-1: 12   Min.   : 4.000   Min.   :0.00492   Min.   :0.1367  
+ 04162019-2: 12   1st Qu.: 7.702   1st Qu.:0.03258   1st Qu.:1.0731  
+ 12042017-1: 12   Median : 8.805   Median :0.04202   Median :1.3010  
+ 12042017-4: 12   Mean   : 9.326   Mean   :0.04544   Mean   :1.4277  
+ 04182019-1:  6   3rd Qu.: 9.777   3rd Qu.:0.04943   3rd Qu.:1.5729  
+ 06112017-4:  6   Max.   :92.000   Max.   :0.13300   Max.   :3.8868  
+ (Other)   :120                                                      
+    Genotype   Pop      Sex         Sample         Glu.Plate     Glucose      
+ PC113  :18   FFD:  0   F:180   A2     :  9   08162017-1:30   Min.   :0.2810  
+ PC114  :18   PC :180   M:  0   A3     :  9   2222019   :30   1st Qu.:0.4870  
+ PC12   :18                     B2     :  9   06222017-1:24   Median :0.5820  
+ PC136  :18                     B3     :  9   08152017-2:24   Mean   :0.6308  
+ PC141  :18                     C2     :  9   10262017-1:24   3rd Qu.:0.7291  
+ PC155  :18                     C3     :  9   10262017-2:24   Max.   :1.4357  
+ (Other):72                     (Other):126   (Other)   :24   NA's   :3       
+    Protein.Plate    Protein          Glu.Pro           Glu.CanS     
+ 06082017-1:  6   Min.   : 6.800   Min.   :0.02459   Min.   :0.5479  
+ 06082017-3:  6   1st Qu.: 9.785   1st Qu.:0.04288   1st Qu.:1.2475  
+ 06122017-1:  6   Median :10.825   Median :0.05246   Median :1.7126  
+ 06122017-2:  6   Mean   :11.227   Mean   :0.05838   Mean   :1.7670  
+ 06152017-4:  6   3rd Qu.:12.300   3rd Qu.:0.06830   3rd Qu.:2.1158  
+ 06272017-1:  6   Max.   :18.000   Max.   :0.19287   Max.   :4.1036  
+ (Other)   :144   NA's   :1        NA's   :4         NA's   :4       
+    Genotype   Pop      Sex         Sample         Glu.Plate     Glucose      
+ PC113  :18   FFD:  0   F:  0   A2     : 10   08162017-2:30   Min.   :0.0670  
+ PC114  :18   PC :174   M:174   B2     : 10   02222019-2:24   1st Qu.:0.2849  
+ PC12   :18                     C2     : 10   07112017-1:24   Median :0.3540  
+ PC136  :18                     D2     : 10   11082017-1:24   Mean   :0.3882  
+ PC141  :18                     E2     : 10   11082017-2:24   3rd Qu.:0.4232  
+ PC155  :18                     F2     : 10   9202018   :24   Max.   :5.2575  
+ (Other):66                     (Other):114   (Other)   :24   NA's   :1       
+    Protein.Plate    Protein          Glu.Pro            Glu.CanS      
+ 06082017-2: 12   Min.   : 3.770   Min.   :0.008201   Min.   : 0.2645  
+ 06272017-2: 12   1st Qu.: 6.600   1st Qu.:0.039079   1st Qu.: 1.2684  
+ 08112017-4: 12   Median : 7.360   Median :0.046844   Median : 1.5324  
+ 06112017-2:  6   Mean   : 7.387   Mean   :0.058147   Mean   : 1.7987  
+ 06122017-1:  6   3rd Qu.: 8.220   3rd Qu.:0.058172   3rd Qu.: 1.8438  
+ (Other)   :125   Max.   :11.600   Max.   :1.380893   Max.   :37.7293  
+ NA's      :  1   NA's   :1        NA's   :1          NA's   :1        
+[1] "Glu_FFD_F_21_CanS"
+[1] 2.055204
+[1] "Glu_FFD_F_21_Pro"
+[1] 0.06818274
+[1] "Glu_FFD_M_21_CanS"
+[1] 1.427704
+[1] "Glu_FFD_M_21_Pro"
+[1] 0.04543515
+[1] "Glu_PC_F_21_CanS"
+[1] 1.767011
+[1] "Glu_PC_F_21_Pro"
+[1] 0.05837499
+[1] "Glu_PC_M_21_CanS"
+[1] 1.798707
+[1] "Glu_PC_M_21_Pro"
+[1] 0.0581471
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$Glu.CanS and Glu_PC_M_21$Glu.CanS
+W = 17318, p-value = 0.02632
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.02631577
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_F_21$Glu.CanS and Glu_FFD_M_21$Glu.CanS
+W = 23425, p-value = 5.606e-15
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 5.605781e-15
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$Glu.CanS and Glu_FFD_M_21$Glu.CanS
+W = 19724, p-value = 1.467e-05
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 1.467231e-05
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$Glu.CanS and Glu_FFD_F_21$Glu.CanS
+W = 12381, p-value = 0.001137
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.001136591
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$Glu.Pro and Glu_PC_M_21$Glu.Pro
+W = 18128, p-value = 0.002066
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.002066381
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_FFD_F_21$Glu.Pro and Glu_FFD_M_21$Glu.Pro
+W = 24298, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 3.005521e-18
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_M_21$Glu.Pro and Glu_FFD_M_21$Glu.Pro
+W = 19289, p-value = 0.0001046
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.0001045878
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  Glu_PC_F_21$Glu.Pro and Glu_FFD_F_21$Glu.Pro
+W = 12479, p-value = 0.001623
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.001623401

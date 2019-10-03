@@ -1,0 +1,11 @@
+sink(file="Glu25_analysis.txt",append=FALSE,split=FALSE)
+
+x<-read.table("25C_TGA_Clean.txt",header=T)
+
+summary(x)
+
+
+FFD_M<-subset(x,x$Pop=="FFD"&x$Sex=="M")
+FFD_F<-subset(x,x$Pop=="FFD"&x$Sex=="F")
+PC_M<-subset(x,x$Pop=="PC"&x$Sex=="M")
+PC_F<-subset(x,x$Pop=="PC"&x$Sex=="F")

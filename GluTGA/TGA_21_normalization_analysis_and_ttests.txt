@@ -1,0 +1,292 @@
+
+Call:
+lm(formula = x$TGA.CanS ~ x$TGA.Plate)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-1.20106 -0.23082 -0.03784  0.17764  2.38656 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            1.2793180  0.0972604  13.154  < 2e-16 ***
+x$TGA.Plate04192019-1 -0.1673883  0.1250155  -1.339 0.181056    
+x$TGA.Plate04192019-2 -0.3608606  0.1239832  -2.911 0.003731 ** 
+x$TGA.Plate04192019-3 -0.2847128  0.1261321  -2.257 0.024322 *  
+x$TGA.Plate04222019-1 -0.3305366  0.1537822  -2.149 0.031971 *  
+x$TGA.Plate04222019-2  0.0169974  0.1213051   0.140 0.888607    
+x$TGA.Plate04232019-1 -0.3679259  0.1301064  -2.828 0.004829 ** 
+x$TGA.Plate04232019-2  0.2376561  0.1250155   1.901 0.057740 .  
+x$TGA.Plate06112017-1  0.1011721  0.1239832   0.816 0.414789    
+x$TGA.Plate06122017-1  0.3464680  0.1239832   2.794 0.005351 ** 
+x$TGA.Plate06122017-2 -0.3526108  0.1250155  -2.821 0.004940 ** 
+x$TGA.Plate06152017-1  0.0902159  0.1239832   0.728 0.467091    
+x$TGA.Plate06152017-2 -0.0004001  0.1191192  -0.003 0.997321    
+x$TGA.Plate06282017-1 -0.0684718  0.1239832  -0.552 0.580955    
+x$TGA.Plate06282017-2 -0.2929580  0.1239832  -2.363 0.018425 *  
+x$TGA.Plate07082017-1 -0.4301583  0.1239832  -3.469 0.000556 ***
+x$TGA.Plate11172017-1 -0.1188129  0.1239832  -0.958 0.338267    
+x$TGA.Plate11172017-2 -0.5209064  0.1239832  -4.201 3.02e-05 ***
+x$TGA.Plate11212017-2 -0.4143801  0.1239832  -3.342 0.000879 ***
+x$TGA.Plate11212017-3 -0.1137269  0.1239832  -0.917 0.359336    
+x$TGA.Plate11222017-1 -0.4696897  0.1316912  -3.567 0.000388 ***
+x$TGA.Plate11222017-2 -0.4489490  0.1316912  -3.409 0.000692 ***
+x$TGA.Plate11302017-1 -0.1678210  0.1239832  -1.354 0.176339    
+x$TGA.Plate11302017-2 -0.0229008  0.1819576  -0.126 0.899883    
+x$TGA.Plate11302017-3 -0.2317202  0.1239832  -1.869 0.062075 .  
+x$TGA.Plate11302017-4 -0.2720919  0.1239832  -2.195 0.028545 *  
+x$TGA.Plate12072017-1  0.3179009  0.1239832   2.564 0.010568 *  
+x$TGA.Plate12072017-2 -0.2324623  0.1239832  -1.875 0.061246 .  
+x$TGA.Plate12072017-3 -0.1767514  0.3890417  -0.454 0.649746    
+x$TGA.Plate12082017-1 -0.3489035  0.1239832  -2.814 0.005038 ** 
+x$TGA.Plate12192017-1 -0.2020075  0.1239832  -1.629 0.103729    
+x$TGA.Plate12192017-2 -0.2475422  0.1316912  -1.880 0.060592 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.3767 on 653 degrees of freedom
+  (21 observations deleted due to missingness)
+Multiple R-squared:  0.2783,	Adjusted R-squared:  0.2441 
+F-statistic: 8.124 on 31 and 653 DF,  p-value: < 2.2e-16
+
+
+Call:
+lm(formula = x$TGA.Prot ~ x$TGA.Plate)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.19697 -0.04172 -0.00631  0.03338  0.32457 
+
+Coefficients:
+                      Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            0.31855    0.01747  18.231  < 2e-16 ***
+x$TGA.Plate04192019-1 -0.10061    0.02246  -4.480 8.83e-06 ***
+x$TGA.Plate04192019-2 -0.16700    0.02227  -7.498 2.13e-13 ***
+x$TGA.Plate04192019-3 -0.17135    0.02266  -7.562 1.36e-13 ***
+x$TGA.Plate04222019-1 -0.05574    0.02763  -2.017 0.044058 *  
+x$TGA.Plate04222019-2 -0.06318    0.02179  -2.899 0.003871 ** 
+x$TGA.Plate04232019-1  0.01411    0.02337   0.604 0.546343    
+x$TGA.Plate04232019-2 -0.07887    0.02246  -3.512 0.000476 ***
+x$TGA.Plate06112017-1 -0.09215    0.02227  -4.137 3.98e-05 ***
+x$TGA.Plate06122017-1 -0.09744    0.02227  -4.375 1.42e-05 ***
+x$TGA.Plate06122017-2 -0.12672    0.02246  -5.642 2.50e-08 ***
+x$TGA.Plate06152017-1 -0.18844    0.02227  -8.460  < 2e-16 ***
+x$TGA.Plate06152017-2 -0.14334    0.02140  -6.698 4.57e-11 ***
+x$TGA.Plate06282017-1 -0.16477    0.02227  -7.397 4.28e-13 ***
+x$TGA.Plate06282017-2 -0.17454    0.02227  -7.836 1.89e-14 ***
+x$TGA.Plate07082017-1 -0.15211    0.02227  -6.829 1.96e-11 ***
+x$TGA.Plate11172017-1 -0.09805    0.02227  -4.402 1.25e-05 ***
+x$TGA.Plate11172017-2 -0.08875    0.02227  -3.984 7.52e-05 ***
+x$TGA.Plate11212017-2 -0.06945    0.02227  -3.118 0.001902 ** 
+x$TGA.Plate11212017-3 -0.13555    0.02227  -6.086 1.98e-09 ***
+x$TGA.Plate11222017-1 -0.11129    0.02366  -4.704 3.12e-06 ***
+x$TGA.Plate11222017-2 -0.10905    0.02366  -4.609 4.86e-06 ***
+x$TGA.Plate11302017-1 -0.12515    0.02227  -5.619 2.85e-08 ***
+x$TGA.Plate11302017-2 -0.06098    0.03269  -1.866 0.062551 .  
+x$TGA.Plate11302017-3 -0.10379    0.02227  -4.660 3.84e-06 ***
+x$TGA.Plate11302017-4 -0.11710    0.02227  -5.257 1.98e-07 ***
+x$TGA.Plate12072017-1 -0.03744    0.02227  -1.681 0.093272 .  
+x$TGA.Plate12072017-2 -0.07568    0.02227  -3.398 0.000721 ***
+x$TGA.Plate12072017-3 -0.06275    0.06989  -0.898 0.369591    
+x$TGA.Plate12082017-1 -0.07757    0.02227  -3.483 0.000530 ***
+x$TGA.Plate12192017-1 -0.11063    0.02227  -4.967 8.71e-07 ***
+x$TGA.Plate12192017-2 -0.18751    0.02366  -7.926 9.83e-15 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06767 on 653 degrees of freedom
+  (21 observations deleted due to missingness)
+Multiple R-squared:  0.3403,	Adjusted R-squared:  0.309 
+F-statistic: 10.86 on 31 and 653 DF,  p-value: < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_F_21$TGA.CanS
+W = 0.8984, p-value = 7.022e-09
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_M_21$TGA.CanS
+W = 0.94771, p-value = 5.626e-06
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_F_21$TGA.CanS
+W = 0.9605, p-value = 7.953e-05
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_M_21$TGA.CanS
+W = 0.90608, p-value = 2.022e-09
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_F_21$TGA.Prot
+W = 0.96944, p-value = 0.001617
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_M_21$TGA.Prot
+W = 0.93411, p-value = 4.337e-07
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_F_21$TGA.Prot
+W = 0.95931, p-value = 6.047e-05
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_M_21$TGA.Prot
+W = 0.94137, p-value = 7.823e-07
+
+    Genotype   Pop      Sex         Sample         TGA.Plate       TGA       
+ FFD10  :18   FFD:166   F:166   A1     :  9   04222019-2:12   Min.   :0.235  
+ FFD14  :18   PC :  0   M:  0   A2     :  9   04232019-1:12   1st Qu.:1.853  
+ FFD16  :18                     B1     :  9   06112017-1:12   Median :2.453  
+ FFD19  :18                     B2     :  9   06122017-2:12   Mean   :2.451  
+ FFD23  :18                     C1     :  9   06152017-2:12   3rd Qu.:2.952  
+ FFD29  :18                     C2     :  9   06282017-2:12   Max.   :5.642  
+ (Other):58                     (Other):112   (Other)   :94   NA's   :4      
+    TGA.Prot          Protein         TGA.CanS     
+ Min.   :0.06297   Min.   : 4.80   Min.   :0.4717  
+ 1st Qu.:0.17885   1st Qu.: 9.95   1st Qu.:0.8686  
+ Median :0.21901   Median :11.28   Median :1.0402  
+ Mean   :0.23217   Mean   :11.15   Mean   :1.0921  
+ 3rd Qu.:0.27815   3rd Qu.:12.58   3rd Qu.:1.3059  
+ Max.   :0.54358   Max.   :15.12   Max.   :3.0348  
+ NA's   :11        NA's   :7       NA's   :11      
+    Genotype   Pop      Sex         Sample         TGA.Plate        TGA       
+ FFD10  :18   FFD:174   F:  0   A1     :  9   04192019-1: 12   Min.   :0.280  
+ FFD14  :18   PC :  0   M:174   B1     :  9   04192019-2: 12   1st Qu.:1.282  
+ FFD16  :18                     C1     :  9   04192019-3: 12   Median :1.532  
+ FFD19  :18                     D1     :  9   04232019-2: 12   Mean   :1.587  
+ FFD2   :18                     E1     :  9   06122017-1: 12   3rd Qu.:1.868  
+ FFD22  :18                     F1     :  9   06152017-1: 12   Max.   :2.954  
+ (Other):66                     (Other):120   (Other)   :102   NA's   :1      
+    TGA.Prot          Protein          TGA.CanS     
+ Min.   :0.03001   Min.   : 4.000   Min.   :0.2363  
+ 1st Qu.:0.15118   1st Qu.: 6.900   1st Qu.:0.8647  
+ Median :0.19209   Median : 8.080   Median :1.1528  
+ Mean   :0.19987   Mean   : 8.209   Mean   :1.1809  
+ 3rd Qu.:0.23214   3rd Qu.: 9.383   3rd Qu.:1.4321  
+ Max.   :0.55350   Max.   :13.400   Max.   :3.1449  
+ NA's   :2                          NA's   :2       
+    Genotype   Pop      Sex         Sample         TGA.Plate        TGA       
+ PC113  :18   FFD:  0   F:180   A3     : 10   04222019-2: 18   Min.   :0.562  
+ PC114  :18   PC :180   M:  0   B3     : 10   04182019-2: 12   1st Qu.:1.666  
+ PC12   :18                     C3     : 10   04232019-1: 12   Median :2.176  
+ PC136  :18                     D3     : 10   06112017-1: 12   Mean   :2.233  
+ PC141  :18                     E3     : 10   06122017-2: 12   3rd Qu.:2.627  
+ PC155  :18                     F3     : 10   06152017-2: 12   Max.   :4.388  
+ (Other):72                     (Other):120   (Other)   :102   NA's   :5      
+    TGA.Prot          Protein         TGA.CanS     
+ Min.   :0.02943   Min.   : 6.10   Min.   :0.1794  
+ 1st Qu.:0.15223   1st Qu.: 9.64   1st Qu.:0.7746  
+ Median :0.19273   Median :10.73   Median :0.9456  
+ Mean   :0.20846   Mean   :11.08   Mean   :1.0047  
+ 3rd Qu.:0.25200   3rd Qu.:11.96   3rd Qu.:1.2145  
+ Max.   :0.46681   Max.   :61.00   Max.   :2.2609  
+ NA's   :6         NA's   :1       NA's   :6       
+    Genotype   Pop      Sex         Sample         TGA.Plate        TGA       
+ PC12   :24   FFD:  0   F:  0   A2     : 10   04192019-1: 12   Min.   :0.296  
+ PC113  :18   PC :186   M:186   B2     : 10   04192019-2: 12   1st Qu.:1.004  
+ PC114  :18                     C2     : 10   04192019-3: 12   Median :1.309  
+ PC136  :18                     D2     : 10   04232019-2: 12   Mean   :1.360  
+ PC141  :18                     E2     : 10   06122017-1: 12   3rd Qu.:1.686  
+ PC155  :18                     F2     : 10   06152017-1: 12   Max.   :2.846  
+ (Other):72                     (Other):126   (Other)   :114   NA's   :2      
+    TGA.Prot          Protein          TGA.CanS     
+ Min.   :0.04418   Min.   : 3.240   Min.   :0.3479  
+ 1st Qu.:0.13781   1st Qu.: 6.300   1st Qu.:0.8152  
+ Median :0.19075   Median : 7.100   Median :1.0674  
+ Mean   :0.20043   Mean   : 7.141   Mean   :1.1692  
+ 3rd Qu.:0.25077   3rd Qu.: 8.170   3rd Qu.:1.4648  
+ Max.   :0.54568   Max.   :11.600   Max.   :4.0123  
+ NA's   :2                          NA's   :2       
+[1] "TGA_FFD_F_21_CanS"
+[1] 1.092131
+[1] "TGA_FFD_F_21_Pro"
+[1] 0.232168
+[1] "TGA_FFD_M_21_CanS"
+[1] 1.18092
+[1] "TGA_FFD_M_21_Pro"
+[1] 0.1998696
+[1] "TGA_PC_F_21_CanS"
+[1] 1.004668
+[1] "TGA_PC_F_21_Pro"
+[1] 0.2084571
+[1] "TGA_PC_M_21_CanS"
+[1] 1.169247
+[1] "TGA_PC_M_21_Pro"
+[1] 0.200428
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGA.CanS and TGA_PC_M_21$TGA.CanS
+W = 13320, p-value = 0.006032
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.006031769
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_FFD_F_21$TGA.CanS and TGA_FFD_M_21$TGA.CanS
+W = 11616, p-value = 0.04472
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.04471997
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_21$TGA.CanS and TGA_FFD_M_21$TGA.CanS
+W = 15008, p-value = 0.4007
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.400661
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGA.CanS and TGA_FFD_F_21$TGA.CanS
+W = 11434, p-value = 0.01727
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.01726737
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGA.Prot and TGA_PC_M_21$TGA.Prot
+W = 17340, p-value = 0.1737
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.1736693
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_FFD_F_21$TGA.Prot and TGA_FFD_M_21$TGA.Prot
+W = 16540, p-value = 0.0001701
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.000170071
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_21$TGA.Prot and TGA_FFD_M_21$TGA.Prot
+W = 15482, p-value = 0.7249
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.7248799
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_21$TGA.Prot and TGA_FFD_F_21$TGA.Prot
+W = 11106, p-value = 0.005748
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.005747908

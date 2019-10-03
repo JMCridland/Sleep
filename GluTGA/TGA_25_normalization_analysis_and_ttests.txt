@@ -1,0 +1,172 @@
+
+Call:
+lm(formula = x$TGA.Prot ~ x$TGA.Plate)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.175826 -0.038959 -0.005722  0.031948  0.304768 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)            0.1995697  0.0105270  18.958  < 2e-16 ***
+x$TGA.Plate06032019-1  0.0287149  0.0166447   1.725 0.084902 .  
+x$TGA.Plate06032019-2  0.0386029  0.0166447   2.319 0.020646 *  
+x$TGA.Plate06032019-3 -0.0541606  0.0185874  -2.914 0.003675 ** 
+x$TGA.Plate06032019-4 -0.0329979  0.0168604  -1.957 0.050698 .  
+x$TGA.Plate06082016-2  0.0315725  0.0148875   2.121 0.034266 *  
+x$TGA.Plate06102016-2  0.1017767  0.0153457   6.632 6.26e-11 ***
+x$TGA.Plate1282016    -0.0155919  0.0148875  -1.047 0.295287    
+x$TGA.Plate1282016-2  -0.0213155  0.0182334  -1.169 0.242754    
+x$TGA.Plate2022016    -0.0059632  0.0210541  -0.283 0.777076    
+x$TGA.Plate3032016     0.0518667  0.0148875   3.484 0.000522 ***
+x$TGA.Plate3042016     0.0391910  0.0148875   2.632 0.008648 ** 
+x$TGA.Plate3092016    -0.0030386  0.0148875  -0.204 0.838324    
+x$TGA.Plate3092016-2  -0.0334050  0.0148875  -2.244 0.025129 *  
+x$TGA.Plate3102016     0.0165722  0.0148875   1.113 0.265990    
+x$TGA.Plate4272016     0.0320103  0.0149934   2.135 0.033083 *  
+x$TGA.Plate5262016     0.0568751  0.0157603   3.609 0.000328 ***
+x$TGA.Plate5312016     0.0465992  0.0166447   2.800 0.005245 ** 
+x$TGA.Plate5312016-2   0.0718920  0.0149934   4.795 1.96e-06 ***
+x$TGA.Plate6012016    -0.0023792  0.0166447  -0.143 0.886377    
+x$TGA.Plate6022016     0.0476018  0.0148875   3.197 0.001444 ** 
+x$TGA.Plate6032016    -0.0006201  0.0149934  -0.041 0.967022    
+x$TGA.Plate6082016     0.0463478  0.0148875   3.113 0.001920 ** 
+x$TGA.Plate6092016     0.0708645  0.0148875   4.760 2.32e-06 ***
+x$TGA.Plate6102016     0.1012264  0.0166447   6.082 1.88e-09 ***
+x$TGA.Plate6162016     0.0252622  0.0148875   1.697 0.090128 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06316 on 762 degrees of freedom
+  (15 observations deleted due to missingness)
+Multiple R-squared:  0.2664,	Adjusted R-squared:  0.2423 
+F-statistic: 11.07 on 25 and 762 DF,  p-value: < 2.2e-16
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_F_25$TGA.Protein
+W = 0.94795, p-value = 7.778e-07
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_FFD_M_25$TGA.Protein
+W = 0.95553, p-value = 4.472e-06
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_F_25$TGA.Protein
+W = 0.91969, p-value = 1.346e-08
+
+
+	Shapiro-Wilk normality test
+
+data:  TGA_PC_M_25$TGA.Protein
+W = 0.97792, p-value = 0.004989
+
+    Genotype   Pop      Sex         Sample         TGA.Plate      TGA.Raw      
+ FFD10  :30   FFD:210   F:210   A3     :  9   04272016-2: 12   Min.   :0.8903  
+ FFD14  :24   PC :  0   M:  0   B3     :  9   06032019-1: 12   1st Qu.:2.1153  
+ FFD19  :24                     C3     :  9   06102016-2: 12   Median :2.4595  
+ FFD23  :24                     D3     :  9   1282016   : 12   Mean   :2.5356  
+ FFD16  :18                     E3     :  9   3042016   : 12   3rd Qu.:2.9800  
+ FFD2   :18                     F3     :  9   (Other)   :149   Max.   :4.3332  
+ (Other):72                     (Other):156   NA's      :  1   NA's   :2       
+      Prot.Plate     Protein        TGA.Protein     
+ 2012016   : 18   Min.   : 3.081   Min.   :0.06891  
+ 06102016-2: 12   1st Qu.: 9.392   1st Qu.:0.18749  
+ 3042016   : 12   Median :10.733   Median :0.22666  
+ 3092016-2 : 12   Mean   :10.940   Mean   :0.24141  
+ 4282016   : 12   3rd Qu.:12.310   3rd Qu.:0.28475  
+ (Other)   :143   Max.   :16.734   Max.   :0.54353  
+ NA's      :  1   NA's   :1        NA's   :2        
+    Genotype   Pop      Sex         Sample         TGA.Plate      TGA.Raw      
+ FFD10  :30   FFD:210   F:  0   A3     :  9   04272016-2: 12   Min.   :0.7882  
+ FFD14  :24   PC :  0   M:210   B3     :  9   06032019-2: 12   1st Qu.:1.3354  
+ FFD19  :24                     C3     :  9   06102016-2: 12   Median :1.6338  
+ FFD23  :24                     D3     :  9   1282016   : 12   Mean   :1.6609  
+ FFD16  :18                     E3     :  9   3042016   : 12   3rd Qu.:1.9553  
+ FFD2   :18                     F3     :  9   3092016   : 12   Max.   :2.8415  
+ (Other):72                     (Other):156   (Other)   :138   NA's   :1       
+      Prot.Plate     Protein        TGA.Protein     
+ 2012016   : 18   Min.   : 4.005   Min.   :0.08769  
+ 06102016-2: 12   1st Qu.: 6.535   1st Qu.:0.17595  
+ 3042016   : 12   Median : 7.116   Median :0.22626  
+ 3092016-2 : 12   Mean   : 7.204   Mean   :0.23715  
+ 4282016   : 12   3rd Qu.: 7.917   3rd Qu.:0.27759  
+ 5042016   : 12   Max.   :12.240   Max.   :0.46287  
+ (Other)   :132   NA's   :1        NA's   :2        
+    Genotype   Pop      Sex         Sample         TGA.Plate      TGA.Raw     
+ PC113  :24   FFD:  0   F:192   A4     :  9   06032019-1: 12   Min.   :1.195  
+ PC200  :24   PC :192   M:  0   B4     :  9   06032019-3: 12   1st Qu.:1.873  
+ PC114  :18                     C4     :  9   06082016-2: 12   Median :2.154  
+ PC12   :18                     D4     :  9   3032016   : 12   Mean   :2.187  
+ PC136  :18                     E4     :  9   3092016-2 : 12   3rd Qu.:2.459  
+ PC141  :18                     F4     :  9   3102016   : 12   Max.   :4.036  
+ (Other):72                     (Other):138   (Other)   :120   NA's   :3      
+      Prot.Plate     Protein        TGA.Protein     
+ 02012016-2: 12   Min.   : 5.567   Min.   :0.09147  
+ 3032016   : 12   1st Qu.: 9.091   1st Qu.:0.17469  
+ 3092016   : 12   Median :10.318   Median :0.21149  
+ 3102016   : 12   Mean   :10.477   Mean   :0.21685  
+ 6082016   : 12   3rd Qu.:11.626   3rd Qu.:0.24565  
+ 6082016-2 : 12   Max.   :19.434   Max.   :0.52812  
+ (Other)   :120   NA's   :4        NA's   :5        
+    Genotype   Pop      Sex         Sample         TGA.Plate      TGA.Raw      
+ PC113  :24   FFD:  0   F:  0   A3     :  8   06032019-4: 17   Min.   :0.5498  
+ PC200  :24   PC :191   M:191   A4     :  8   06032019-2: 12   1st Qu.:1.1015  
+ PC114  :18                     B3     :  8   06082016-2: 12   Median :1.3139  
+ PC12   :18                     B4     :  8   3032016   : 12   Mean   :1.3783  
+ PC136  :18                     C3     :  8   3092016-2 : 12   3rd Qu.:1.6357  
+ PC155  :18                     C4     :  8   3102016   : 12   Max.   :2.8413  
+ (Other):71                     (Other):143   (Other)   :114   NA's   :4       
+     Prot.Plate     Protein        TGA.Protein     
+ 3032016  : 12   Min.   : 3.524   Min.   :0.09537  
+ 3092016  : 12   1st Qu.: 5.906   1st Qu.:0.15939  
+ 3102016  : 12   Median : 6.556   Median :0.20115  
+ 6082016  : 12   Mean   : 6.752   Mean   :0.20888  
+ 6082016-2: 12   3rd Qu.: 7.311   3rd Qu.:0.25392  
+ (Other)  :129   Max.   :12.689   Max.   :0.39161  
+ NA's     :  2   NA's   :5        NA's   :6        
+[1] "TGA_FFD_F_25_Pro"
+[1] 0.2414056
+[1] "TGA_FFD_M_25_Pro"
+[1] 0.2371545
+[1] "TGA_PC_F_25_Pro"
+[1] 0.2168546
+[1] "TGA_PC_M_25_Pro"
+[1] 0.208875
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_25$TGA.Protein and TGA_PC_M_25$TGA.Protein
+W = 18317, p-value = 0.3258
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.3257743
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_FFD_F_25$TGA.Protein and TGA_FFD_M_25$TGA.Protein
+W = 22178, p-value = 0.6564
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.6563982
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_M_25$TGA.Protein and TGA_FFD_M_25$TGA.Protein
+W = 15264, p-value = 0.0004049
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.0004049284
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TGA_PC_F_25$TGA.Protein and TGA_FFD_F_25$TGA.Protein
+W = 15953, p-value = 0.002039
+alternative hypothesis: true location shift is not equal to 0
+
+[1] 0.002039393
