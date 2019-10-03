@@ -1,0 +1,9 @@
+This folder contains data, scripts and output files from Sarikaya et al. 2019.
+
+Raw DAM monitor information is organized in folders by the date the experiment was set up.
+
+DATA/ contains output files resulting from the analyses performed.
+
+scripts/ contains perl scripts used in the analysis.
+
+Scripts_and_Files.numbers contains a list of scripts used as well as their input and output files.
