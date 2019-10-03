@@ -1,0 +1,1071 @@
+    Genotype    Pop           Num        Sex          Temp    Sleep_ALL_percent
+ FFD29  : 32   FFD:272   Min.   :10.00   F:273   Min.   :21   Min.   :0.2330   
+ FFD4   : 32   PC :283   1st Qu.:17.00   M:282   1st Qu.:21   1st Qu.:0.5605   
+ PC12   : 32             Median :25.00           Median :21   Median :0.6520   
+ FFD10  : 31             Mean   :25.39           Mean   :21   Mean   :0.6399   
+ FFD14  : 31             3rd Qu.:33.00           3rd Qu.:21   3rd Qu.:0.7210   
+ FFD2   : 31             Max.   :41.00           Max.   :21   Max.   :0.9560   
+ (Other):366                                                                   
+ Sleep_ALL_boutNum Sleep_ALL_meanBout Sleep_ALL_meanMove Sleep_Day_percent
+ Min.   : 13.00    Min.   : 10.59     Min.   :0.608      Min.   :0.0150   
+ 1st Qu.: 38.00    1st Qu.: 26.50     1st Qu.:1.113      1st Qu.:0.3080   
+ Median : 50.00    Median : 36.21     Median :1.334      Median :0.4350   
+ Mean   : 52.32    Mean   : 41.51     Mean   :1.399      Mean   :0.4298   
+ 3rd Qu.: 66.00    3rd Qu.: 51.17     3rd Qu.:1.620      3rd Qu.:0.5470   
+ Max.   :107.00    Max.   :157.77     Max.   :3.851      Max.   :0.9760   
+                                                                          
+ Sleep_Day_boutNum Sleep_Day_meanBout Sleep_Day_meanMove Sleep_Night_percent
+ Min.   : 2.00     Min.   :  5.333    Min.   :0.5650     Min.   :0.2090     
+ 1st Qu.:12.00     1st Qu.: 11.449    1st Qu.:0.9305     1st Qu.:0.8020     
+ Median :16.00     Median : 17.589    Median :1.1430     Median :0.8920     
+ Mean   :16.97     Mean   : 21.861    Mean   :1.2041     Mean   :0.8490     
+ 3rd Qu.:21.00     3rd Qu.: 27.079    3rd Qu.:1.3915     3rd Qu.:0.9455     
+ Max.   :40.50     Max.   :141.333    Max.   :5.1700     Max.   :0.9880     
+                                                                            
+ Sleep_Night_boutNum Sleep_Night_meanBout Sleep_Night_meanMove
+ Min.   : 1.000      Min.   : 10.29       Min.   :0.850       
+ 1st Qu.: 4.500      1st Qu.: 46.37       1st Qu.:1.744       
+ Median : 8.500      Median :106.44       Median :2.193       
+ Mean   : 9.449      Mean   :170.84       Mean   :2.248       
+ 3rd Qu.:13.500      3rd Qu.:232.71       3rd Qu.:2.659       
+ Max.   :36.000      Max.   :710.00       Max.   :5.020       
+                                                              
+ Starve_ALL_percent Starve_ALL_boutNum Starve_ALL_meanBout Starve_ALL_meanMove
+ Min.   :0.0380     Min.   : 2.00      Min.   :  5.895     Min.   :0.655      
+ 1st Qu.:0.4320     1st Qu.:12.00      1st Qu.: 22.057     1st Qu.:1.148      
+ Median :0.5430     Median :19.00      Median : 36.583     Median :1.388      
+ Mean   :0.5139     Mean   :21.29      Mean   : 47.718     Mean   :1.439      
+ 3rd Qu.:0.6250     3rd Qu.:28.00      3rd Qu.: 59.931     3rd Qu.:1.663      
+ Max.   :0.8510     Max.   :82.00      Max.   :298.333     Max.   :3.010      
+                                                                              
+ Starve_Day_percent Starve_Day_boutNum Starve_Day_meanBout Starve_Day_meanMove
+ Min.   :0.0070     Min.   : 1.000     Min.   :  5.00      Min.   :0.557      
+ 1st Qu.:0.1505     1st Qu.: 3.500     1st Qu.:  8.00      1st Qu.:1.008      
+ Median :0.2580     Median : 6.000     Median : 11.10      Median :1.223      
+ Mean   :0.2731     Mean   : 6.872     Mean   : 18.23      Mean   :1.273      
+ 3rd Qu.:0.3720     3rd Qu.: 9.500     3rd Qu.: 20.56      3rd Qu.:1.462      
+ Max.   :0.7990     Max.   :19.500     Max.   :181.00      Max.   :2.945      
+                                                                              
+ Starve_Night_percent Starve_Night_boutNum Starve_Night_meanBout
+ Min.   :0.0070       Min.   : 1.000       Min.   :  5.00       
+ 1st Qu.:0.6160       1st Qu.: 3.000       1st Qu.: 32.32       
+ Median :0.8460       Median : 6.000       Median : 80.62       
+ Mean   :0.7422       Mean   : 8.663       Mean   :134.81       
+ 3rd Qu.:0.9360       3rd Qu.:12.000       3rd Qu.:169.75       
+ Max.   :0.9920       Max.   :45.000       Max.   :711.00       
+                                                                
+ Starve_Night_meanMove
+ Min.   :0.575        
+ 1st Qu.:1.586        
+ Median :2.012        
+ Mean   :2.097        
+ 3rd Qu.:2.555        
+ Max.   :4.754        
+                      
+Call:
+   manova(cbind(x$Sleep_ALL_percent, x$Starve_ALL_percent, x$Sleep_Day_percent, 
+    x$Sleep_Night_percent, x$Starve_Day_percent, x$Starve_Night_percent, 
+    x$Sleep_ALL_boutNum, x$Starve_ALL_boutNum, x$Sleep_Day_boutNum, 
+    x$Sleep_Night_boutNum, x$Starve_Day_boutNum, x$Starve_Night_boutNum, 
+    x$Sleep_ALL_meanBout, x$Starve_ALL_meanBout, x$Sleep_Day_meanBout, 
+    x$Sleep_Night_meanBout, x$Starve_Day_meanBout, x$Starve_Night_meanBout, 
+    x$Sleep_ALL_meanMove, x$Starve_ALL_meanMove, x$Sleep_Day_meanMove, 
+    x$Sleep_Night_meanMove, x$Starve_Day_meanMove, x$Starve_Night_meanMove) ~ 
+    x$Pop + x$Sex)
+
+Terms:
+                   x$Pop    x$Sex Residuals
+resp 1                 1        1         7
+resp 2                 0        0        15
+resp 3                 0        3        14
+resp 4                 2        0         9
+resp 5                 0        0        14
+resp 6                 1        0        35
+resp 7              3751    15788    181958
+resp 8               137     3681     73263
+resp 9               435     2019     22899
+resp 10               73      345     21797
+resp 11               65      550      8611
+resp 12                2      182     27942
+resp 13            13872    27058    197589
+resp 14            13732    12397    772657
+resp 15             5907    28104     96575
+resp 16           571361   111374  14665688
+resp 17              764    15482    189334
+resp 18           175201    30849  13654205
+resp 19                2       15        77
+resp 20                4       12        69
+resp 21                0       11        80
+resp 22                1       10       224
+resp 23                1        8        58
+resp 24                1       19       272
+Deg. of Freedom        1        1       552
+
+Residual standard errors: 0.1107036 0.1631461 0.1594635 0.1242772 0.1599989 0.2510506 18.15581 11.52052 6.440852 6.283845 3.949599 7.114685 18.91962 37.41311 13.22707 162.9978 18.52014 157.2764 0.3741132 0.3538518 0.3800873 0.6363325 0.3232199 0.7020336
+Estimated effects may be unbalanced
+           Df  Pillai approx F num Df den Df    Pr(>F)    
+x$Pop       1 0.30040   9.4643     24    529 < 2.2e-16 ***
+x$Sex       1 0.44871  17.9406     24    529 < 2.2e-16 ***
+Residuals 552                                             
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+ Response 1 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1 0.6940 0.69404  56.632 2.149e-13 ***
+x$Sex         1 0.8697 0.86970  70.966 3.160e-16 ***
+Residuals   552 6.7649 0.01226                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 2 :
+             Df  Sum Sq  Mean Sq F value    Pr(>F)    
+x$Pop         1  0.2995 0.299544 11.2540 0.0008491 ***
+x$Sex         1  0.0166 0.016589  0.6232 0.4301840    
+Residuals   552 14.6924 0.026617                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 3 :
+             Df  Sum Sq Mean Sq  F value    Pr(>F)    
+x$Pop         1  0.1871  0.1871   7.3595  0.006879 ** 
+x$Sex         1  3.3049  3.3049 129.9660 < 2.2e-16 ***
+Residuals   552 14.0366  0.0254                       
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 4 :
+             Df Sum Sq Mean Sq F value Pr(>F)    
+x$Pop         1 1.5208 1.52084 98.4694 <2e-16 ***
+x$Sex         1 0.0025 0.00254  0.1647  0.685    
+Residuals   552 8.5255 0.01544                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 5 :
+             Df  Sum Sq Mean Sq F value   Pr(>F)   
+x$Pop         1  0.0036 0.00361  0.1410 0.707432   
+x$Sex         1  0.2094 0.20941  8.1801 0.004395 **
+Residuals   552 14.1310 0.02560                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 6 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1  1.269 1.26864 20.1287 8.815e-06 ***
+x$Sex         1  0.034 0.03369  0.5345     0.465    
+Residuals   552 34.791 0.06303                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 7 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1   3751  3750.5  11.378 0.0007954 ***
+x$Sex         1  15788 15787.7  47.895 1.252e-11 ***
+Residuals   552 181958   329.6                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 8 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1    137   137.5  1.0357    0.3093    
+x$Sex         1   3681  3681.2 27.7361 1.996e-07 ***
+Residuals   552  73263   132.7                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 9 :
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1   434.9  434.93  10.484  0.001276 ** 
+x$Sex         1  2019.5 2019.46  48.680 8.663e-12 ***
+Residuals   552 22899.5   41.48                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 10 :
+             Df  Sum Sq Mean Sq F value   Pr(>F)   
+x$Pop         1    72.8   72.78  1.8431 0.175148   
+x$Sex         1   345.3  345.35  8.7459 0.003236 **
+Residuals   552 21796.7   39.49                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 11 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1   64.8   64.79  4.1535   0.04202 *  
+x$Sex         1  550.3  550.29 35.2767 5.065e-09 ***
+Residuals   552 8610.8   15.60                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 12 :
+             Df  Sum Sq Mean Sq F value  Pr(>F)  
+x$Pop         1     2.2   2.171  0.0429 0.83600  
+x$Sex         1   182.3 182.275  3.6009 0.05827 .
+Residuals   552 27941.5  50.619                  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 13 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1  13872   13872  38.753 9.528e-10 ***
+x$Sex         1  27058   27058  75.591 < 2.2e-16 ***
+Residuals   552 197589     358                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 14 :
+             Df Sum Sq Mean Sq F value   Pr(>F)   
+x$Pop         1  13732 13732.3  9.8106 0.001827 **
+x$Sex         1  12397 12397.0  8.8567 0.003048 **
+Residuals   552 772657  1399.7                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 15 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1   5907  5907.2  33.764 1.052e-08 ***
+x$Sex         1  28104 28104.1 160.636 < 2.2e-16 ***
+Residuals   552  96575   175.0                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 16 :
+             Df   Sum Sq Mean Sq F value   Pr(>F)    
+x$Pop         1   571361  571361  21.505 4.41e-06 ***
+x$Sex         1   111374  111374   4.192  0.04109 *  
+Residuals   552 14665688   26568                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 17 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1    764   764.4  2.2286     0.136    
+x$Sex         1  15482 15481.6 45.1365 4.585e-11 ***
+Residuals   552 189334   343.0                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 18 :
+             Df   Sum Sq Mean Sq F value   Pr(>F)   
+x$Pop         1   175201  175201  7.0829 0.008009 **
+x$Sex         1    30849   30849  1.2471 0.264586   
+Residuals   552 13654205   24736                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 19 :
+             Df Sum Sq Mean Sq F value  Pr(>F)    
+x$Pop         1  1.557  1.5568  11.123 0.00091 ***
+x$Sex         1 15.026 15.0259 107.358 < 2e-16 ***
+Residuals   552 77.258  0.1400                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 20 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1  4.035  4.0350  32.226  2.22e-08 ***
+x$Sex         1 12.167 12.1666  97.168 < 2.2e-16 ***
+Residuals   552 69.117  0.1252                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 21 :
+             Df Sum Sq Mean Sq F value Pr(>F)    
+x$Pop         1  0.076  0.0760  0.5262 0.4685    
+x$Sex         1 10.691 10.6912 74.0050 <2e-16 ***
+Residuals   552 79.745  0.1445                   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 22 :
+             Df  Sum Sq Mean Sq F value  Pr(>F)    
+x$Pop         1   0.712  0.7118  1.7579  0.1854    
+x$Sex         1  10.135 10.1350 25.0296 7.6e-07 ***
+Residuals   552 223.515  0.4049                    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 23 :
+             Df Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1  1.417  1.4167  13.561 0.0002537 ***
+x$Sex         1  8.104  8.1039  77.570 < 2.2e-16 ***
+Residuals   552 57.668  0.1045                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+ Response 24 :
+             Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Pop         1   0.708  0.7079  1.4364    0.2312    
+x$Sex         1  19.110 19.1104 38.7752 9.426e-10 ***
+Residuals   552 272.054  0.4929                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_percent and FFD_F$Sleep_Day_percent
+t = 6.8404, df = 267.04, p-value = 5.376e-11
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.09551249 0.17271853
+sample estimates:
+mean of x mean of y 
+0.4771304 0.3430149 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_percent and FFD_F$Sleep_Night_percent
+t = 0.079823, df = 251.85, p-value = 0.9364
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.03493021  0.03788132
+sample estimates:
+mean of x mean of y 
+0.7963188 0.7948433 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_percent and FFD_F$Starve_Day_percent
+t = 3.0781, df = 269.82, p-value = 0.002298
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.02083905 0.09480641
+sample estimates:
+mean of x mean of y 
+0.3041884 0.2463657 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_percent and FFD_F$Starve_Night_percent
+t = -0.14584, df = 264.46, p-value = 0.8842
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.06674093  0.05753565
+sample estimates:
+mean of x mean of y 
+0.6911884 0.6957910 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_boutNum and FFD_F$Sleep_Day_boutNum
+t = -3.6595, df = 247.79, p-value = 0.0003088
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.581796 -1.375483
+sample estimates:
+mean of x mean of y 
+ 16.40942  19.38806 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_boutNum and FFD_F$Sleep_Night_boutNum
+t = -0.8736, df = 256.72, p-value = 0.3832
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.1485022  0.8280393
+sample estimates:
+mean of x mean of y 
+ 9.492754 10.152985 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_boutNum and FFD_F$Starve_Day_boutNum
+t = -2.8346, df = 261.54, p-value = 0.004946
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.3291781 -0.4196862
+sample estimates:
+mean of x mean of y 
+ 6.543478  7.917910 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_boutNum and FFD_F$Starve_Night_boutNum
+t = -3.6751, df = 230.3, p-value = 0.0002958
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.331443 -1.307969
+sample estimates:
+mean of x mean of y 
+ 7.210145 10.029851 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_meanBout and FFD_F$Sleep_Day_meanBout
+t = 8.7424, df = 263.26, p-value = 2.747e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+  7.659258 12.112364
+sample estimates:
+mean of x mean of y 
+ 23.40333  13.51752 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_meanBout and FFD_F$Sleep_Night_meanBout
+t = -0.11874, df = 269.73, p-value = 0.9056
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -35.86535  31.78512
+sample estimates:
+mean of x mean of y 
+ 137.1045  139.1446 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_meanBout and FFD_F$Starve_Day_meanBout
+t = 3.6565, df = 235.5, p-value = 0.0003154
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+  3.609996 12.044473
+sample estimates:
+mean of x mean of y 
+ 20.89038  13.06315 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_meanBout and FFD_F$Starve_Night_meanBout
+t = 0.19643, df = 258.19, p-value = 0.8444
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -29.89150  36.51558
+sample estimates:
+mean of x mean of y 
+ 118.3185  115.0064 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_meanMove and FFD_F$Sleep_Day_meanMove
+t = 5.9907, df = 250.68, p-value = 7.218e-09
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.2018907 0.3996499
+sample estimates:
+mean of x mean of y 
+ 1.364196  1.063425 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_meanMove and FFD_F$Sleep_Night_meanMove
+t = 4.6491, df = 268.59, p-value = 5.232e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1907803 0.4710582
+sample estimates:
+mean of x mean of y 
+ 2.374957  2.044037 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_meanMove and FFD_F$Starve_Day_meanMove
+t = 4.7928, df = 260.11, p-value = 2.768e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1205231 0.2886190
+sample estimates:
+mean of x mean of y 
+ 1.424870  1.220299 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_meanMove and FFD_F$Starve_Night_meanMove
+t = 5.0641, df = 269.98, p-value = 7.609e-07
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.2401297 0.5455997
+sample estimates:
+mean of x mean of y 
+ 2.326783  1.933918 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Day_percent and PC_F$Sleep_Day_percent
+t = 9.2918, df = 278.93, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1369855 0.2106289
+sample estimates:
+mean of x mean of y 
+0.5331597 0.3593525 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Night_percent and PC_F$Sleep_Night_percent
+t = 0.6491, df = 279.82, p-value = 0.5168
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01418926  0.02815069
+sample estimates:
+mean of x mean of y 
+0.9037361 0.8967554 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Day_percent and PC_F$Starve_Day_percent
+t = 1.0558, df = 280.95, p-value = 0.292
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01782593  0.05906843
+sample estimates:
+mean of x mean of y 
+0.2807292 0.2601079 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Night_percent and PC_F$Starve_Night_percent
+t = -0.90515, df = 279.71, p-value = 0.3662
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.08298435  0.03070687
+sample estimates:
+mean of x mean of y 
+0.7762569 0.8023957 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Day_boutNum and PC_F$Sleep_Day_boutNum
+t = -6.2401, df = 237.05, p-value = 1.996e-09
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -6.078584 -3.161474
+sample estimates:
+mean of x mean of y 
+ 13.83681  18.45683 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Night_boutNum and PC_F$Sleep_Night_boutNum
+t = -3.2609, df = 274.26, p-value = 0.001251
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.9449896 -0.9748246
+sample estimates:
+mean of x mean of y 
+ 7.885417 10.345324 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Day_boutNum and PC_F$Starve_Day_boutNum
+t = -5.5581, df = 261.92, p-value = 6.707e-08
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.500990 -1.669324
+sample estimates:
+mean of x mean of y 
+ 5.267361  7.852518 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Night_boutNum and PC_F$Starve_Night_boutNum
+t = 0.50126, df = 280.21, p-value = 0.6166
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.352801  2.277161
+sample estimates:
+mean of x mean of y 
+ 8.951389  8.489209 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Day_meanBout and PC_F$Sleep_Day_meanBout
+t = 9.8885, df = 207.83, p-value < 2.2e-16
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 14.74244 22.08454
+sample estimates:
+mean of x mean of y 
+ 34.10337  15.68988 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Night_meanBout and PC_F$Sleep_Night_meanBout
+t = 2.695, df = 272.93, p-value = 0.007477
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 15.50461 99.56251
+sample estimates:
+mean of x mean of y 
+ 230.5517  173.0182 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Day_meanBout and PC_F$Starve_Day_meanBout
+t = 5.8528, df = 212.03, p-value = 1.818e-08
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+  8.751326 17.639941
+sample estimates:
+mean of x mean of y 
+ 25.86319  12.66755 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Night_meanBout and PC_F$Starve_Night_meanBout
+t = -1.5694, df = 263.08, p-value = 0.1178
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -73.121309   8.259125
+sample estimates:
+mean of x mean of y 
+ 136.2993  168.7304 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Day_meanMove and PC_F$Sleep_Day_meanMove
+t = 6.1942, df = 279.75, p-value = 2.086e-09
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1742168 0.3365284
+sample estimates:
+mean of x mean of y 
+ 1.318042  1.062669 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Sleep_Night_meanMove and PC_F$Sleep_Night_meanMove
+t = 2.6213, df = 278.2, p-value = 0.009242
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.05280297 0.37127507
+sample estimates:
+mean of x mean of y 
+ 2.387715  2.175676 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Day_meanMove and PC_F$Starve_Day_meanMove
+t = 7.9974, df = 256.12, p-value = 4.391e-14
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.2090939 0.3457067
+sample estimates:
+mean of x mean of y 
+ 1.359271  1.081871 
+
+
+	Welch Two Sample t-test
+
+data:  PC_M$Starve_Night_meanMove and PC_F$Starve_Night_meanMove
+t = 3.9001, df = 275, p-value = 0.0001209
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.1734918 0.5271513
+sample estimates:
+mean of x mean of y 
+ 2.233861  1.883540 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_percent and PC_M$Sleep_Day_percent
+t = -3.0485, df = 279.11, p-value = 0.00252
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.09220885 -0.01984973
+sample estimates:
+mean of x mean of y 
+0.4771304 0.5331597 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_percent and PC_M$Sleep_Night_percent
+t = -7.9485, df = 238.33, p-value = 7.521e-14
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.13403956 -0.08079498
+sample estimates:
+mean of x mean of y 
+0.7963188 0.9037361 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_percent and PC_M$Starve_Day_percent
+t = 1.203, df = 279.95, p-value = 0.23
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01492825  0.06184673
+sample estimates:
+mean of x mean of y 
+0.3041884 0.2807292 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_percent and PC_M$Starve_Night_percent
+t = -2.9539, df = 278.77, p-value = 0.003405
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.14175849 -0.02837858
+sample estimates:
+mean of x mean of y 
+0.6911884 0.7762569 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_boutNum and PC_M$Sleep_Day_boutNum
+t = 4.0781, df = 267.9, p-value = 5.992e-05
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 1.330593 3.814637
+sample estimates:
+mean of x mean of y 
+ 16.40942  13.83681 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_boutNum and PC_M$Sleep_Night_boutNum
+t = 2.3449, df = 279.87, p-value = 0.01973
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.2580091 2.9566648
+sample estimates:
+mean of x mean of y 
+ 9.492754  7.885417 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_boutNum and PC_M$Starve_Day_boutNum
+t = 3.0157, df = 276.17, p-value = 0.002802
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.4431002 2.1091341
+sample estimates:
+mean of x mean of y 
+ 6.543478  5.267361 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_boutNum and PC_M$Starve_Night_boutNum
+t = -2.2737, df = 245.19, p-value = 0.02385
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.2496905 -0.2327974
+sample estimates:
+mean of x mean of y 
+ 7.210145  8.951389 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_meanBout and PC_M$Sleep_Day_meanBout
+t = -5.6836, df = 214.09, p-value = 4.283e-08
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -14.410896  -6.989187
+sample estimates:
+mean of x mean of y 
+ 23.40333  34.10337 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_meanBout and PC_M$Sleep_Night_meanBout
+t = -4.5804, df = 259.45, p-value = 7.212e-06
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -133.62107  -53.27329
+sample estimates:
+mean of x mean of y 
+ 137.1045  230.5517 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_meanBout and PC_M$Starve_Day_meanBout
+t = -1.8484, df = 277.56, p-value = 0.06562
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -10.2689838   0.3233769
+sample estimates:
+mean of x mean of y 
+ 20.89038  25.86319 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_meanBout and PC_M$Starve_Night_meanBout
+t = -1.0834, df = 273.68, p-value = 0.2796
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -50.65476  14.69298
+sample estimates:
+mean of x mean of y 
+ 118.3185  136.2993 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Day_meanMove and PC_M$Sleep_Day_meanMove
+t = 1.1073, df = 277.7, p-value = 0.2691
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.03589945  0.12820742
+sample estimates:
+mean of x mean of y 
+ 1.364196  1.318042 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Sleep_Night_meanMove and PC_M$Sleep_Night_meanMove
+t = -0.16817, df = 279.87, p-value = 0.8666
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.1621015  0.1365840
+sample estimates:
+mean of x mean of y 
+ 2.374957  2.387715 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Day_meanMove and PC_M$Starve_Day_meanMove
+t = 1.6681, df = 279.95, p-value = 0.09642
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.01181401  0.14301147
+sample estimates:
+mean of x mean of y 
+ 1.424870  1.359271 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_M$Starve_Night_meanMove and PC_M$Starve_Night_meanMove
+t = 1.0535, df = 270.5, p-value = 0.293
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.08072137  0.26656437
+sample estimates:
+mean of x mean of y 
+ 2.326783  2.233861 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Day_percent and PC_F$Sleep_Day_percent
+t = -0.82047, df = 269.46, p-value = 0.4127
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05554158  0.02286639
+sample estimates:
+mean of x mean of y 
+0.3430149 0.3593525 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Night_percent and PC_F$Sleep_Night_percent
+t = -6.1484, df = 203.19, p-value = 4.079e-09
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.13459377 -0.06923045
+sample estimates:
+mean of x mean of y 
+0.7948433 0.8967554 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Day_percent and PC_F$Starve_Day_percent
+t = -0.73032, df = 270.83, p-value = 0.4658
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.05078788  0.02330340
+sample estimates:
+mean of x mean of y 
+0.2463657 0.2601079 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Night_percent and PC_F$Starve_Night_percent
+t = -3.3702, df = 265.56, p-value = 0.0008626
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.16888461 -0.04432467
+sample estimates:
+mean of x mean of y 
+0.6957910 0.8023957 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Day_boutNum and PC_F$Sleep_Day_boutNum
+t = 1.033, df = 269.84, p-value = 0.3025
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.8436731  2.7061234
+sample estimates:
+mean of x mean of y 
+ 19.38806  18.45683 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Night_boutNum and PC_F$Sleep_Night_boutNum
+t = -0.23491, df = 270.28, p-value = 0.8145
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.804297  1.419619
+sample estimates:
+mean of x mean of y 
+ 10.15299  10.34532 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Day_boutNum and PC_F$Starve_Day_boutNum
+t = 0.1253, df = 270.84, p-value = 0.9004
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.9620825  1.0928674
+sample estimates:
+mean of x mean of y 
+ 7.917910  7.852518 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Night_boutNum and PC_F$Starve_Night_boutNum
+t = 1.6688, df = 270.94, p-value = 0.09631
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.2769374  3.3582216
+sample estimates:
+mean of x mean of y 
+10.029851  8.489209 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Day_meanBout and PC_F$Sleep_Day_meanBout
+t = -1.9815, df = 268.12, p-value = 0.04855
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.33082764 -0.01389736
+sample estimates:
+mean of x mean of y 
+ 13.51752  15.68988 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Night_meanBout and PC_F$Sleep_Night_meanBout
+t = -1.8515, df = 269.06, p-value = 0.06519
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -69.893355   2.146337
+sample estimates:
+mean of x mean of y 
+ 139.1446  173.0182 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Day_meanBout and PC_F$Starve_Day_meanBout
+t = 0.25392, df = 264.58, p-value = 0.7998
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.672017  3.463208
+sample estimates:
+mean of x mean of y 
+ 13.06315  12.66755 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Night_meanBout and PC_F$Starve_Night_meanBout
+t = -2.5732, df = 260.63, p-value = 0.01063
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -94.83556 -12.61248
+sample estimates:
+mean of x mean of y 
+ 115.0064  168.7304 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Day_meanMove and PC_F$Sleep_Day_meanMove
+t = 0.015178, df = 248.56, p-value = 0.9879
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.09738519  0.09889780
+sample estimates:
+mean of x mean of y 
+ 1.063425  1.062669 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Sleep_Night_meanMove and PC_F$Sleep_Night_meanMove
+t = -1.7205, df = 261.4, p-value = 0.08652
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.28229491  0.01901702
+sample estimates:
+mean of x mean of y 
+ 2.044037  2.175676 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Day_meanMove and PC_F$Starve_Day_meanMove
+t = 3.6002, df = 221.49, p-value = 0.0003924
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 0.06265341 0.21420260
+sample estimates:
+mean of x mean of y 
+ 1.220299  1.081871 
+
+
+	Welch Two Sample t-test
+
+data:  FFD_F$Starve_Night_meanMove and PC_F$Starve_Night_meanMove
+t = 0.63432, df = 270.35, p-value = 0.5264
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.1059841  0.2067408
+sample estimates:
+mean of x mean of y 
+ 1.933918  1.883540 
+

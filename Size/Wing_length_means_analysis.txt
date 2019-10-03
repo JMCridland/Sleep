@@ -1,0 +1,49 @@
+    Genotype        Temp        Pop     Sex    Food     MeanLength    
+ FFD10  :  8   Min.   :21.00   FFD:80   F:78   F:79   Min.   :0.9597  
+ FFD14  :  8   1st Qu.:21.00   PC :78   M:80   Q:79   1st Qu.:1.3197  
+ FFD16  :  8   Median :21.00                          Median :1.4116  
+ FFD19  :  8   Mean   :22.97                          Mean   :1.4137  
+ FFD2   :  8   3rd Qu.:25.00                          3rd Qu.:1.5091  
+ FFD22  :  8   Max.   :25.00                          Max.   :1.7714  
+ (Other):110                                                          
+  MedianLength   
+ Min.   :0.9637  
+ 1st Qu.:1.3221  
+ Median :1.4144  
+ Mean   :1.4174  
+ 3rd Qu.:1.5107  
+ Max.   :1.7750  
+                 
+
+Call:
+lm(formula = x$MeanLength ~ x$Temp + x$Pop + x$Sex + x$Food)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.237728 -0.033612  0.000931  0.034360  0.146435 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  2.356022   0.058208  40.476  < 2e-16 ***
+x$Temp      -0.033142   0.002496 -13.276  < 2e-16 ***
+x$PopPC     -0.072361   0.009985  -7.247 1.97e-11 ***
+x$SexM      -0.171583   0.009985 -17.183  < 2e-16 ***
+x$FoodQ     -0.116672   0.009983 -11.687  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.06274 on 153 degrees of freedom
+Multiple R-squared:  0.8135,	Adjusted R-squared:  0.8086 
+F-statistic: 166.8 on 4 and 153 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: x$MeanLength
+           Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Temp      1 0.70747 0.70747 179.721 < 2.2e-16 ***
+x$Pop       1 0.21969 0.21969  55.808 5.705e-12 ***
+x$Sex       1 1.16233 1.16233 295.272 < 2.2e-16 ***
+x$Food      1 0.53769 0.53769 136.591 < 2.2e-16 ***
+Residuals 153 0.60228 0.00394                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
