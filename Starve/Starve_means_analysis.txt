@@ -1,0 +1,39 @@
+    Genotype   Pop     Sex         Temp       MeanLD50        MedianLD50    
+ FFD10  : 4   FFD:40   F:40   Min.   :21   Min.   : 40.00   Min.   : 42.00  
+ FFD14  : 4   PC :40   M:40   1st Qu.:21   1st Qu.: 60.66   1st Qu.: 65.50  
+ FFD16  : 4                   Median :23   Median : 81.00   Median : 77.75  
+ FFD19  : 4                   Mean   :23   Mean   : 81.49   Mean   : 82.56  
+ FFD2   : 4                   3rd Qu.:25   3rd Qu.: 97.75   3rd Qu.: 98.12  
+ FFD22  : 4                   Max.   :25   Max.   :136.67   Max.   :142.50  
+ (Other):56                                                                 
+
+Call:
+lm(formula = x$MeanLD50 ~ x$Sex + x$Pop + x$Temp)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-34.465  -8.177  -0.738   7.164  38.209 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 254.1692    17.8208  14.262  < 2e-16 ***
+x$SexM      -28.8239     3.0647  -9.405 2.24e-14 ***
+x$PopPC     -11.7114     3.0647  -3.821  0.00027 ***
+x$Temp       -6.6267     0.7662  -8.649 6.28e-13 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 13.71 on 76 degrees of freedom
+Multiple R-squared:  0.7006,	Adjusted R-squared:  0.6888 
+F-statistic: 59.29 on 3 and 76 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: x$MeanLD50
+          Df  Sum Sq Mean Sq F value    Pr(>F)    
+x$Sex      1 16616.3 16616.3  88.456 2.245e-14 ***
+x$Pop      1  2743.1  2743.1  14.603 0.0002696 ***
+x$Temp     1 14052.0 14052.0  74.805 6.280e-13 ***
+Residuals 76 14276.5   187.8                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
